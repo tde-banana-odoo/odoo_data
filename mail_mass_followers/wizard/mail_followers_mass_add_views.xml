@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="mail_followers_mass_add_form" model="ir.ui.view">
+            <field name="name">mail.followers.mass.add.form</field>
+            <field name="model">mail.followers.mass.add</field>
+            <field name="arch" type="xml">
+                <form string="Mass Addition of Followers">
+                    <group>
+                        <field name="res_model" invisible="1"/>
+                        <field name="res_id" invisible="1"/>
+                        <field name="mode" widget="radio"/>
+                        <field name="partner_ids" widget="many2many_tags"
+                            attrs="{'invisible': [('mode', '=', 'reset')]}"/>
+                        <field name="email_list"
+                            attrs="{'invisible': [('mode', '=', 'reset')]}"/>
+                        <field name="new_follower_ids" widget="many2many_tags"
+                            attrs="{'invisible': [('mode', '=', 'reset')]}"/>/>
+                    </group>
+                    <footer>
+                        <button string="Update" name="action_update" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- wizard action on res.partner -->
+        <act_window id="action_mail_followers_mass_add"
+            name="Add Followers (mass)"
+            src_model="mail.group"
+            res_model="mail.followers.mass.add"
+            view_type="form"
+            view_mode="form"
+            target="new"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="res_partner_mass_create_form" model="ir.ui.view">
+            <field name="name">res.partner.mass.create.form</field>
+            <field name="model">res.partner.mass.create</field>
+            <field name="arch" type="xml">
+                <form string="Mass Creation of Partners">
+                    <group>
+                        <field name="email"/>
+                        <field name="counter"/>
+                    </group>
+                    <footer>
+                        <button string="Update" name="action_update" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- wizard action on res.partner -->
+        <act_window id="action_res_partner_mass_create"
+            name="Create Partners (mass)"
+            src_model="res.partner"
+            res_model="res.partner.mass.create"
+            view_type="form"
+            view_mode="form"
+            target="new"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mail_followers_mass_add_all,mail.followers.mass.add.all,model_mail_followers_mass_add,,0,0,0,0
+access_mail_followers_mass_add_user,mail.followers.mass.add.user,model_mail_followers_mass_add,base.group_user,1,1,1,0
+access_res_partner_mass_create_all,res.partner.mass.create.all,model_res_partner_mass_create,,0,0,0,0
+access_res_partner_mass_create_user,res.partner.mass.create.user,model_res_partner_mass_create,base.group_user,1,1,1,0
