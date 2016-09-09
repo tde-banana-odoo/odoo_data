@@ -10,7 +10,7 @@
 This module adds vigorous data. For my tests.
 ==============================================
     """,
-    'depends': ['base_data', 'hr_recruitment'],
+    'depends': ['hr_data', 'hr_recruitment'],
     'data': [
         'data/hr_recruitment_data.xml',
     ],

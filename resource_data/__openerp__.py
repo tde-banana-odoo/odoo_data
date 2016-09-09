@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Project Data',
+    'name': 'Resource Data',
     'version': '1.0',
     'category': 'Tools',
     'complexity': 'easy',
@@ -10,10 +10,9 @@
 This module adds vigorous data. For my tests.
 ==============================================
     """,
-    'depends': ['base_data', 'project'],
+    'depends': ['base_data', 'resource'],
     'data': [
-        'data/res_partner_data.xml',
-        'data/project_data.xml',
+        'data/resource_data.xml',
     ],
     'installable': True,
     'auto_install': True,

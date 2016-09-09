@@ -54,27 +54,41 @@
         </record>
 
         <record id="project_1" model="project.project">
-            <field name="name">Super Project</field>
+            <field name="name">Furniture Improvements</field>
             <field name="alias_name">tde+project</field>
+            <field name="privacy_visibility">employees</field>
             <field name="type_ids" eval="[(4, ref('project_stage_1')), (4, ref('project_stage_2')), (4, ref('project_stage_3'))]"/>
+            <field name="user_id" ref="base_data.res_users_0"/>
+            <field name="favorite_user_ids" eval="[(4, ref('base_data.res_users_0')), (4, ref('base.user_root'))]"/>
         </record>
         <record id="project_2" model="project.project">
-            <field name="name">Rotten Project</field>
-            <field name="alias_name">tde+project_rotten</field>
+            <field name="name">Customer Proposals</field>
+            <field name="alias_name">tde+project_custo</field>
+            <field name="privacy_visibility">portal</field>
             <field name="type_ids" eval="[(4, ref('project_stage_1')), (4, ref('project_stage_4'))]"/>
+            <field name="user_id" ref="base_data.res_users_1"/>
+            <field name="favorite_user_ids" eval="[(5, 0)]"/>
         </record>
 
+        <function model="project.project" name="message_subscribe_users"
+            eval="[ref('project_1'), ref('project_2')], [ref('base_data.res_users_1')]"/>
+            <function model="project.project" name="message_subscribe_users"
+            eval="[ref('project_2')], [ref('base_data.res_users_3')]"/>
+
         <record id="project_task_1" model="project.task">
-            <field name="name">Super Task</field>
+            <field name="name">5 Feets Table</field>
+            <field name="user_id" ref="base_data.res_users_1"/>
             <field name="project_id" ref="project_1"/>
         </record>
         <record id="project_task_2" model="project.task">
-            <field name="name">Dev Task</field>
+            <field name="name">Optimize Circular Saw</field>
+            <field name="user_id" ref="base_data.res_users_1"/>
             <field name="project_id" ref="project_1"/>
             <field name="stage_id" ref="project_stage_2"/>
         </record>
         <record id="project_task_3" model="project.task">
-            <field name="name">Rotten Task</field>
+            <field name="name">Bat Improvements with Oil</field>
+            <field name="user_id" ref="base_data.res_users_2"/>
             <field name="project_id" ref="project_2"/>
         </record>
     </data>

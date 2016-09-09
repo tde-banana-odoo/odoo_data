@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Project Data',
+    'name': 'Stock Data',
     'version': '1.0',
     'category': 'Tools',
     'complexity': 'easy',
@@ -10,10 +10,10 @@
 This module adds vigorous data. For my tests.
 ==============================================
     """,
-    'depends': ['base_data', 'project'],
+    'depends': ['product_data', 'stock'],
     'data': [
         'data/res_partner_data.xml',
-        'data/project_data.xml',
+        'data/stock_data.xml',
     ],
     'installable': True,
     'auto_install': True,

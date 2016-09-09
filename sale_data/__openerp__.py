@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Project Data',
+    'name': 'Sale Data',
     'version': '1.0',
     'category': 'Tools',
     'complexity': 'easy',
@@ -10,10 +10,10 @@
 This module adds vigorous data. For my tests.
 ==============================================
     """,
-    'depends': ['base_data', 'project'],
+    'depends': ['product_data', 'sale'],
     'data': [
         'data/res_partner_data.xml',
-        'data/project_data.xml',
+        'data/sale_data.xml',
     ],
     'installable': True,
     'auto_install': True,

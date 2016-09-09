@@ -26,24 +26,48 @@
             <field name="mobile">+555 44 33 22 11</field>
             <field name="title" ref="base.res_partner_title_mister"/>
         </record>
-        <record id="res_users_1" model="res.users">
-            <field name="name">Power User</field>
+        <record id="res_partner_user_0" model="res.partner">
+            <field name="name">Mega User</field>
+        </record>
+        <record id="res_users_0" model="res.users">
+            <field name="partner_id" eval="res_partner_user_0"/>
             <field name="parent_id" eval="ref('base.main_partner')"/>
-            <field name="login">dummy</field>
+            <field name="login">dummy0</field>
             <field name="password">dummy</field>
+            <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
+            <field name="image" type="base64" file="base_data/static/img/head_w_1.jpg"/>
+            <field name="signature" type="xml"><p>--<br />Your Mega User</p></field>
+            <field name="function">Mega User</field>
+            <field name="phone">+555 11 22 33 44</field>
+            <field name="email">user0@example.com</field>
+            <field name="mobile">+555 44 33 22 11</field>
+        </record>
+        <record id="res_partner_user_1" model="res.partner">
+            <field name="name">Power User</field>
+        </record>
+        <record id="res_users_1" model="res.users">
+            <field name="partner_id" eval="res_partner_user_1"/>
+            <field name="parent_id" eval="ref('base.main_partner')"/>
+            <field name="login">dummy1</field>
+            <field name="password">dummy</field>
+            <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
             <field name="image" type="base64" file="base_data/static/img/head_m_2.jpg"/>
             <field name="signature" type="xml"><p>--<br />Your Power User</p></field>
             <field name="function">Power User</field>
             <field name="phone">+555 11 22 33 44</field>
-            <field name="email">user@example.com</field>
+            <field name="email">user1@example.com</field>
             <field name="mobile">+555 44 33 22 11</field>
         </record>
-        <record id="res_users_2" model="res.users">
+        <record id="res_partner_user_2" model="res.partner">
             <field name="name">Low User</field>
+        </record>
+        <record id="res_users_2" model="res.users">
+            <field name="partner_id" eval="res_partner_user_2"/>
             <field name="parent_id" eval="ref('base.main_partner')"/>
             <field name="login">dummy2</field>
             <field name="password">dummy</field>
-            <field name="image" type="base64" file="base_data/static/img/head_w_1.jpg"/>
+            <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
+            <field name="image" type="base64" file="base_data/static/img/head_w_2.jpg"/>
             <field name="signature" type="xml"><p>--<br />Your Low-End User</p></field>
             <field name="function">Low-end User</field>
             <field name="phone">+555 11 22 33 44</field>
@@ -82,7 +106,7 @@
             <field name="name">Raoulette Poiluchette</field>
             <field name="parent_id" eval="ref('res_partner_company_1')"/>
             <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/head_w_2.jpg"/>
+            <field name="image" type="base64" file="base_data/static/img/head_w_3.jpg"/>
             <field name="type">contact</field>
             <field name="function">Whatsup</field>
             <field name="phone">+555 11 22 33 44</field>
@@ -127,7 +151,7 @@
             <field name="name">Josianne Deal My Weed</field>
             <field name="parent_id" eval="ref('res_partner_company_2')"/>
             <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/head_w_3.jpg"/>
+            <field name="image" type="base64" file="base_data/static/img/head_w_4.jpg"/>
             <field name="type">contact</field>
             <field name="function">Whatsup</field>
             <field name="phone">+555 11 22 33 44</field>
@@ -173,7 +197,7 @@
         <record id="res_partner_4" model="res.partner">
             <field name="name">Gretta GmailAddress</field>
             <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/head_w_4.jpg"/>
+            <field name="image" type="base64" file="base_data/static/img/head_w_5.jpg"/>
             <field name="street">Vache Street</field>
             <field name="zip">Vache</field>
             <field name="city">Vache City</field>
