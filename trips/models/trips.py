@@ -7,9 +7,10 @@ from odoo.addons.website.models.website import slug
 class TripLocation(models.Model):
     _name = 'trip.location'
     _description = 'Trip Location'
-    _inherit = ['mail.thread', 'website.seo.metadata', 'website.published.mixin']
+    _inherit = ['mail.thread', 'mail.alias.mixin', 'website.seo.metadata', 'website.published.mixin']
 
     name = fields.Char('Trip Location', required=True, track_visibility='always')
+    alias_id = fields.Many2one('mail.alias', string='Alias', ondelete="restrict", required=True)
     image = fields.Binary('Image', attachment=True)
     user_id = fields.Many2one('res.users', 'Responsible', default=lambda self: self.env.uid)
     partner_id = fields.Many2one('res.partner', 'Customer')
@@ -42,6 +43,14 @@ class TripLocation(models.Model):
     def action_get_ratings(self):
         action = self.env['ir.actions.act_window'].for_xml_id('rating', 'action_view_rating')
         return dict(action, domain=[('res_id', 'in', self.attendee_ids.ids), ('res_model', '=', 'trip.attendee')])
+
+    def get_alias_model_name(self, vals):
+        return vals.get('alias_model', 'trip.attendee')
+
+    def get_alias_values(self):
+        values = super(TripLocation, self).get_alias_values()
+        values['alias_defaults'] = {'location_id': self.id}
+        return values
 
 
 class TripAttendee(models.Model):

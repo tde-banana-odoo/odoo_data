@@ -2,8 +2,15 @@
 <odoo>
     <data noupdate="0">
 
+        <record id="mail_alias_location_1" model="mail.alias">
+            <field name="alias_name">tde+the_farm</field>
+            <field name="alias_model_id" ref="trips.model_trip_attendee"/>
+            <field name="alias_parent_model_id" ref="trips.model_trip_location"/>
+        </record>
+
         <record id="location_odoo" model="trip.location">
             <field name="name">The Farm</field>
+            <field name="alias_id" ref="trips.mail_alias_location_1"/>
             <field name="user_id" ref="base_data.res_users_1"/>
             <field name="partner_id" ref="base_data.res_partner_4"/>
             <field name="short_description">
@@ -135,8 +142,15 @@ What about some generated content ?</field>
             <field name="location_id" ref="trips.location_odoo"/>
         </record>
 
+        <record id="mail_alias_location_1" model="mail.alias">
+            <field name="alias_parent_thread_id" ref="trips.location_odoo"/>
+            <field name="alias_defaults" eval="{
+'location_id': ref('trips.location_odoo')}"/>
+        </record>
+
         <record id="location_island" model="trip.location">
             <field name="name">The Island</field>
+            <field name="alias_id" ref="trips.mail_alias_location_1"/>
             <field name="image"></field>
             <field name="description" type="html"><p>Great.</p></field>
             <field name="short_description">
