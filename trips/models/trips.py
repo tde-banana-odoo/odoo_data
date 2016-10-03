@@ -6,6 +6,7 @@ from odoo import api, fields, models, _
 class TripLocation(models.Model):
     _name = 'trip.location'
     _description = 'Trip Location'
+    _inherit = ['mail.thread']
 
     name = fields.Char('Trip Location', required=True)
     image = fields.Binary('Image', attachment=True)
@@ -26,6 +27,7 @@ class TripLocation(models.Model):
 class TripAttendee(models.Model):
     _name = 'trip.attendee'
     _description = 'Trip Attendee'
+    _inherit = ['mail.thread']
 
     name = fields.Char('Name')
     email = fields.Char('Email')

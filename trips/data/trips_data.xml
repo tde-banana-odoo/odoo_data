@@ -149,5 +149,37 @@ What about some generated content ?</field>
             <field name="image" type="base64" file="trips/static/img/lac.jpg"/>
         </record>
 
+		<record id="msg_1_1" model="mail.message">
+            <field name="subject">Inquiry about The Farm</field>
+            <field name="model">trip.location</field>
+            <field name="res_id" ref="location_odoo"/>
+            <field name="author_id" ref="base_data.res_partner_4"/>
+            <field name="body" type="html">
+<p>Hello,</p>
+<p>I have a question regarding The Farm. I would like to know whether dogs are accepted.</p>
+<p>Best regards,</p>
+<p>Gretta</p>
+</field>
+            <field name="message_type">email</field>
+            <field name="subtype_id" ref="mail.mt_comment"/>
+        </record>
+        <record id="msg_1_2" model="mail.message">
+            <field name="subject"></field>
+            <field name="model">trip.location</field>
+            <field name="res_id" ref="location_odoo"/>
+            <field name="author_id" ref="base_data.res_partner_user_1"/>
+            <field name="body" type="html">
+<p>Hello,</p>
+<p>Sure! We all love dogs at The Farm. Be sure he will receive a lot of attention.</p>
+<p>Best regards,</p>
+</field>
+            <field name="message_type">comment</field>
+            <field name="subtype_id" ref="mail.mt_comment"/>
+        </record>
+
+        <function model="trip.location" name="message_subscribe"
+            eval="[ref('location_odoo')],
+                  [ref('base_data.res_partner_4'), ref('base_data.res_partner_4')]"/>
+
     </data>
 </odoo>
