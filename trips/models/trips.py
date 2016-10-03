@@ -32,11 +32,16 @@ class TripLocation(models.Model):
             if location.id:
                 location.website_url = '/trip/%s' % slug(location)
 
+    @api.multi
+    def action_get_ratings(self):
+        action = self.env['ir.actions.act_window'].for_xml_id('rating', 'action_view_rating')
+        return dict(action, domain=[('res_id', 'in', self.attendee_ids.ids), ('res_model', '=', 'trip.attendee')])
+
 
 class TripAttendee(models.Model):
     _name = 'trip.attendee'
     _description = 'Trip Attendee'
-    _inherit = ['mail.thread', 'utm.mixin']
+    _inherit = ['mail.thread', 'utm.mixin', 'rating.mixin']
 
     name = fields.Char('Name')
     email = fields.Char('Email')
@@ -52,3 +57,9 @@ class TripAttendee(models.Model):
             vals['email'] = partner.email
         attendee = super(TripAttendee, self).create(vals)
         return attendee
+
+    @api.multi
+    def action_send_rating(self):
+        rating_template = self.env.ref('trips.mail_template_trip_location_rating')
+        for location in self:
+            location.rating_send_request(rating_template, reuse_rating=False, force_send=True)

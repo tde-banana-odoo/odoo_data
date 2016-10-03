@@ -33,6 +33,11 @@
                                     type="object" icon="fa-globe">
                                 <field name="website_published" widget="website_button"/>
                             </button>
+                            <button name="action_get_ratings" type="object"
+                                    class="oe_stat_button" icon="fa-smile-o">
+                            <!-- <field name="rating_count" string="Rating" widget="statinfo"/> -->
+                                Rating
+                            </button>
                         </div>
                         <field name="image" widget='image' class="oe_avatar"/>
                         <group>
@@ -136,6 +141,10 @@
             <field name="model">trip.attendee</field>
             <field name="arch" type="xml">
                 <form string="Trip Attendee">
+                    <header>
+                        <button string="Rating Request" name="action_send_rating"
+                            type="object" class="oe_highlight"/>
+                    </header>
                     <sheet>
                         <div class="oe_button_box" name="button_box">
                         </div>

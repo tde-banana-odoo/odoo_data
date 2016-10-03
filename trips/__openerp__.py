@@ -13,6 +13,7 @@ Organize and manage trips !
     'depends': ['mail', 'rating', 'website', 'base_data'],
     'data': [
         'data/trips_data.xml',
+        'data/mail_template_data.xml',
         'security/ir.model.access.csv',
         'views/trips_views.xml',
         'views/trips_templates.xml',
