@@ -181,5 +181,13 @@ What about some generated content ?</field>
             eval="[ref('location_odoo')],
                   [ref('base_data.res_partner_4'), ref('base_data.res_partner_4')]"/>
 
+        <record id="mt_dog" model="mail.message.subtype">
+            <field name="name">Dog Permission</field>
+            <field name="res_model">trip.location</field>
+            <field name="default" eval="True"/>
+            <field name="hidden" eval="False"/>
+            <field name="description">Dog Permission</field>
+        </record>
+
     </data>
 </odoo>

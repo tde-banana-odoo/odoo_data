@@ -9,7 +9,7 @@ class TripLocation(models.Model):
     _description = 'Trip Location'
     _inherit = ['mail.thread', 'website.seo.metadata', 'website.published.mixin']
 
-    name = fields.Char('Trip Location', required=True)
+    name = fields.Char('Trip Location', required=True, track_visibility='always')
     image = fields.Binary('Image', attachment=True)
     user_id = fields.Many2one('res.users', 'Responsible', default=lambda self: self.env.uid)
     partner_id = fields.Many2one('res.partner', 'Customer')
@@ -17,7 +17,7 @@ class TripLocation(models.Model):
     description = fields.Html('Description')
     attendee_ids = fields.One2many('trip.attendee', 'location_id', 'Attendees')
     attendee_count = fields.Integer('# Attendees', compute='_compute_attendee_count')
-    dog_permission = fields.Boolean('Dog Allowed', default=False)
+    dog_permission = fields.Boolean('Dog Allowed', default=False, track_visibility='onchange')
 
     @api.one
     @api.depends('attendee_ids.location_id')
@@ -31,6 +31,12 @@ class TripLocation(models.Model):
         for location in self:
             if location.id:
                 location.website_url = '/trip/%s' % slug(location)
+
+    @api.multi
+    def _track_subtype(self, init_values):
+        if 'dog_permission' in init_values and self.dog_permission:
+            return 'trips.mt_dog'
+        return super(TripLocation, self)._track_subtype(init_values)
 
     @api.multi
     def action_get_ratings(self):
