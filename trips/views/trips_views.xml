@@ -5,6 +5,18 @@
         <!-- Main menu items -->
         <menuitem name="Trips" id="trip_menu_main" sequence="65" web_icon="trips,static/description/icon.png"/>
 
+        <record id="trip_attendee_action_from_location" model="ir.actions.act_window">
+            <field name="name">Trip Attendees</field>
+            <field name="res_model">trip.attendee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('location_id', '=', active_id)]</field>
+            <field name="help" type="html">
+<p class="oe_view_nocontent_create">
+    Click to add a new attendee.
+</p></field>
+        </record>
+
         <!-- TRIP.LOCATION VIEWS -->
         <record id="trip_location_view_form" model="ir.ui.view">
             <field name="name">trip.location.view.form</field>
@@ -37,6 +49,7 @@
             <field name="arch" type="xml">
                 <kanban string="Trip Locations">
                     <field name="name"/>
+                    <field name="attendee_count"/>
                     <field name="image"/>
                     <templates>
                         <t t-name="kanban-box">
@@ -58,6 +71,11 @@
                                 <div>
                                     <img t-att-src="kanban_image('trip.location', 'image', record.image.raw_value)"
                                         t-att-title="record.name.value" width="96" height="96" class="oe_kanban_avatar pull-right"/>
+                                    <div class="mt16">
+                                        <a name="%(trip_attendee_action_from_location)d" type="action">
+                                            <span class="o_value"><t t-esc="record.attendee_count.value"/> Attendees</span>
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="oe_clear"></div>
                             </div>
@@ -99,7 +117,6 @@
             action="trip_location_action_main"
             sequence="10"
             parent="trip_menu_main"/>
-
 
         <!-- EVENT.EVENT VIEWS -->
 <!--         <record model="ir.ui.view" id="view_event_form">

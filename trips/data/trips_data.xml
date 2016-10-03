@@ -130,6 +130,11 @@ What about some generated content ?</field>
             <field name="image" type="base64" file="trips/static/img/odoo.jpg"/>
         </record>
 
+        <record id="attendee_odoo_1" model="trip.attendee">
+            <field name="partner_id" ref="base_data.res_partner_4"/>
+            <field name="location_id" ref="trips.location_odoo"/>
+        </record>
+
         <record id="location_island" model="trip.location">
             <field name="name">The Island</field>
             <field name="image"></field>

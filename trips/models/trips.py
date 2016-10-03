@@ -13,7 +13,14 @@ class TripLocation(models.Model):
     partner_id = fields.Many2one('res.partner', 'Customer')
     short_description = fields.Text('Short Description')
     description = fields.Html('Description')
+    attendee_ids = fields.One2many('trip.attendee', 'location_id', 'Attendees')
+    attendee_count = fields.Integer('# Attendees', compute='_compute_attendee_count')
     dog_permission = fields.Boolean('Dog Allowed', default=False)
+
+    @api.one
+    @api.depends('attendee_ids.location_id')
+    def _compute_attendee_count(self):
+        self.attendee_count = len(self.attendee_ids)
 
 
 class TripAttendee(models.Model):
@@ -23,6 +30,7 @@ class TripAttendee(models.Model):
     name = fields.Char('Name')
     email = fields.Char('Email')
     partner_id = fields.Many2one('res.partner', 'Customer')
+    location_id = fields.Many2one('trip.location', 'Location', required=True)
 
     @api.onchange('partner_id')
     def onchange_partner_id(self):
