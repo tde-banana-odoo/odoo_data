@@ -6,7 +6,7 @@ from odoo import api, fields, models, _
 class TripLocation(models.Model):
     _name = 'trip.location'
     _description = 'Trip Location'
-    _inherit = ['mail.thread']
+    _inherit = ['mail.thread', 'website.seo.metadata']
 
     name = fields.Char('Trip Location', required=True)
     image = fields.Binary('Image', attachment=True)
