@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data noupdate="0">
+
+<template id="slide_footer" inherit_id="website.footer_default" name="Footer Slides Link">
+    <xpath expr="//div[@id='info']//ul[@class='list-unstyled']" position="inside">
+        <li>
+            <a href="/trips">Trip Locations</a>
+        </li>
+    </xpath>
+</template>
+
+<template id="trip_locations_main" name="Trip Locations">
+    <t t-call="website.layout">
+        <div class="container mt16">
+            <h1>Select a Location</h1>
+            <div class="row">
+                <t t-foreach="locations" t-as="location">
+                    <div class="col-sm-4 mb32">
+                        <div class="well well-sm">
+                            <div>
+                                <a t-attf-href="/trip/#{slug(location)}">
+                                    <img t-attf-src="/web/image/trip.location/#{location.id}/image" class="img-responsive"/>
+                                </a>
+                            </div>
+                            <div>
+                                <h3 class="mt4 mb4 lead" t-att-title="location.name" style="width:55%">
+                                    <a t-attf-href="/trip/#{slug(location)}" t-esc="location.name"/>
+                                </h3>
+                            </div>
+                            <div>
+                                <p class="text-muted oe_no_empty" t-field="location.short_description"/>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+</template>
+
+<template id="trip_location_main" name="Trip Location">
+    <t t-call="website.layout">
+        <div class="container mt16">
+            <div class="row">
+                <div class="col-md-10 mt16 mb8">
+                    <h3 class="mt0">
+                        <a t-attf-href="/trip/#{slug(location)}" t-esc="location.name"/>
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <ul class="nav nav-tabs nav-tabs-border">
+                        <li>
+                            <a t-attf-href="/trips"> <i class="fa fa-home"></i> Home</a>
+                        </li>
+                        <li>
+                            <a t-attf-href="/trip/#{slug(location)}">
+                                <t t-esc="location.name"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="clearfix"/>
+                    <div itemprop="description" t-field="location.description"></div>
+                    <div class="clearfix"/>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
+
+    </data>
+</odoo>

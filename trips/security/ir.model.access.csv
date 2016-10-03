@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_trip_location_public,trip.location.public,model_trip_location,base.group_public,1,0,0,0
+access_trip_location_portal,trip.location.portal,model_trip_location,base.group_portal,1,0,0,0
+access_trip_location_user,trip.location.user,model_trip_location,base.group_user,1,1,1,1
+access_trip_attendee_public,trip.attendee.public,model_trip_attendee,base.group_public,1,0,0,0
+access_trip_attendee_portal,trip.attendee.portal,model_trip_attendee,base.group_portal,1,0,0,0
+access_trip_attendee_user,trip.attendee.user,model_trip_attendee,base.group_user,1,1,1,1

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="location_odoo" model="trip.location">
+            <field name="name">The Farm</field>
+            <field name="user_id" ref="base_data.res_users_1"/>
+            <field name="partner_id" ref="base_data.res_partner_4"/>
+            <field name="short_description">
+Probably the best place in the world. I assure you.
+What about some generated content ?
+What about some generated content ?
+What about some generated content ?
+What about some generated content ?
+What about some generated content ?</field>
+            <field name="description" type="html">
+<section class="s_text_block_image_fw oe_img_bg oe_custom_bg" style="background-image: url(/web/image/website.s_cover_default_image); background-position: 50% 100%">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mt64 mb64 bg-black-25">
+                <h2 style="font-size:62px">The Farm</h2>
+                <h4 class="text-muted">A Great Place to Live</h4>
+                <p>I doubt someone will really read this. However let us write several sentences in order to span on several lines. Act casually, someone is watching us.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="s_comparisons">
+    <div class="container">
+        <h2 class="text-center o_default_snippet_text">Our Offers</h2>
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading text-center">
+                        <h3 style="margin: 0">Small Dog<br /></h3>
+                        <p style="margin: 0" class="text-muted o_default_snippet_text">
+                            Starter package
+                        </p>
+                    </div>
+                    <div class="panel-body text-center text-muted" style="background-color: rgba(0,0,0,0.1)">
+                        <h3 style="margin: 0"><span class="o_default_snippet_text">$</span><b style="font-size: 60px" class="o_default_snippet_text">35</b><small class="o_default_snippet_text">.00</small></h3>
+                        <div class="o_default_snippet_text">user / month (billed annually)</div>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Some things</li>
+                        <li class="list-group-item">Some things</li>
+                        <li class="list-group-item">Some things</li>
+                        <li class="list-group-item">Some things</li>
+                    </ul>
+                    <div class="panel-footer text-center">
+                        <p class="text-muted">
+                            <i class="o_default_snippet_text">Instant setup, satisfied or reimbursed.</i>
+                        </p>
+                        <a href="/page/website.contactus" class="btn btn-primary btn-lg o_default_snippet_text">Order now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                        <h3 style="margin: 0">Mid Dog</h3>
+                        <p style="margin: 0" class="o_default_snippet_text">Enterprise package</p>
+                    </div>
+                    <div class="panel-body text-center text-muted" style="background-color: rgba(0,0,0,0.1)">
+                        <h3 style="margin: 0"><span class="o_default_snippet_text">$</span><b style="font-size: 60px" class="o_default_snippet_text">65</b><small class="o_default_snippet_text">.00</small></h3>
+                        <div class="o_default_snippet_text">user / month (billed annually)</div>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Some things</li>
+                        <li class="list-group-item">Some things</li>
+                        <li class="list-group-item">Some things</li>
+                        <li class="list-group-item">Some things</li>
+                    </ul>
+                    <div class="panel-footer text-center">
+                        <p class="text-muted"><i class="o_default_snippet_text">Instant setup, satisfied or reimbursed.</i></p>
+                        <a href="/page/website.contactus" class="btn btn-primary btn-lg o_default_snippet_text">Order now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading text-center">
+                        <h3 style="margin: 0"> Expert Dog</h3>
+                        <p style="margin: 0" class="text-muted o_default_snippet_text">Ultimate package</p>
+                    </div>
+                    <div class="panel-body text-center text-muted" style="background-color: rgba(0,0,0,0.1)">
+                        <h3 style="margin: 0"><span class="o_default_snippet_text">$</span><b style="font-size: 60px" class="o_default_snippet_text">125</b><small class="o_default_snippet_text">.00</small></h3>
+                        <div class="o_default_snippet_text">user / month (billed annually)</div>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Some things</li>
+                        <li class="list-group-item">Some things</li>
+                        <li class="list-group-item">Some things</li>
+                        <li class="list-group-item">Some things</li>
+                    </ul>
+                    <div class="panel-footer text-center">
+                        <p class="text-muted"><i>Instant setup, satisfied or reimbursed.</i></p>
+                        <a href="/page/website.contactus" class="btn btn-primary btn-lg">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="s_references bg-gray-lighter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 mt48">
+              <h4 class="text-center mt16 o_default_snippet_text">Our References</h4>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 mt16 mb16">
+              <img src="/web/image/website.s_reference_demo_image_1" class="img img-responsive " alt="Demo Logo" />
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 mt16 mb16">
+              <img src="/web/image/website.s_reference_demo_image_2" class="img img-responsive " alt="Demo Logo" />
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 mt16 mb16">
+              <img src="/web/image/website.s_reference_demo_image_3" class="img img-responsive " alt="Demo Logo" />
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 mt16 mb16">
+              <img src="/web/image/website.s_reference_demo_image_4" class="img img-responsive " alt="Demo Logo" />
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 mt16 mb16">
+              <img src="/web/image/website.s_reference_demo_image_5" class="img img-responsive " alt="Demo Logo" />
+            </div>
+        </div>
+    </div>
+</section>
+</field>
+            <field name="image" type="base64" file="trips/static/img/odoo.jpg"/>
+        </record>
+
+        <record id="location_island" model="trip.location">
+            <field name="name">The Island</field>
+            <field name="image"></field>
+            <field name="description" type="html"><p>Great.</p></field>
+            <field name="short_description">
+Probably the best place in the world. I assure you.
+What about some generated content ?
+What about some generated content ?
+What about some generated content ?
+What about some generated content ?
+What about some generated content ?</field>
+            <field name="image" type="base64" file="trips/static/img/odoo.jpg"/>
+        </record>
+
+    </data>
+</odoo>
