@@ -31,17 +31,12 @@ class TripAttendee(models.Model):
     email = fields.Char('Email')
     partner_id = fields.Many2one('res.partner', 'Customer')
     location_id = fields.Many2one('trip.location', 'Location', required=True)
-
-    @api.onchange('partner_id')
-    def onchange_partner_id(self):
-        if self.partner_id:
-            self.name = self.partner_id.name
-            self.email = self.partner_id.email
+    user_id = fields.Many2one('res.users', 'Responsible', related='location_id.user_id', store=True)
 
     @api.model
     def create(self, vals):
         if vals.get('partner_id'):
-            partner = self.env['partner_id'].browse(vals['partner_id'])
+            partner = self.env['res.partner'].browse(vals['partner_id'])
             vals['name'] = partner.name
             vals['email'] = partner.email
         attendee = super(TripAttendee, self).create(vals)

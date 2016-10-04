@@ -146,7 +146,7 @@ What about some generated content ?
 What about some generated content ?
 What about some generated content ?
 What about some generated content ?</field>
-            <field name="image" type="base64" file="trips/static/img/odoo.jpg"/>
+            <field name="image" type="base64" file="trips/static/img/lac.jpg"/>
         </record>
 
     </data>
