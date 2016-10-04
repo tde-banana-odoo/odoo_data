@@ -136,10 +136,17 @@
                         <div class="oe_button_box" name="button_box">
                         </div>
                         <group>
-                            <field name="name"/>
-                            <field name="partner_id"/>
-                            <field name="location_id"/>
-                            <field name="user_id"/>
+                            <group>
+                                <field name="name"/>
+                                <field name="partner_id"/>
+                                <field name="location_id"/>
+                                <field name="user_id"/>
+                            </group>
+                            <group>
+                                <field name="campaign_id"/>
+                                <field name="source_id"/>
+                                <field name="medium_id"/>
+                            </group>
                         </group>
                     </sheet>
                 </form>

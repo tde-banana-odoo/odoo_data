@@ -27,7 +27,7 @@ class TripLocation(models.Model):
 class TripAttendee(models.Model):
     _name = 'trip.attendee'
     _description = 'Trip Attendee'
-    _inherit = ['mail.thread']
+    _inherit = ['mail.thread', 'utm.mixin']
 
     name = fields.Char('Name')
     email = fields.Char('Email')
