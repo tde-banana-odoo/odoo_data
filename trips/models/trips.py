@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
 from odoo import api, fields, models, _
+from odoo.addons.website.models.website import slug
 
 
 class TripLocation(models.Model):
     _name = 'trip.location'
     _description = 'Trip Location'
-    _inherit = ['mail.thread', 'website.seo.metadata']
+    _inherit = ['mail.thread', 'website.seo.metadata', 'website.published.mixin']
 
     name = fields.Char('Trip Location', required=True)
     image = fields.Binary('Image', attachment=True)
@@ -22,6 +23,14 @@ class TripLocation(models.Model):
     @api.depends('attendee_ids.location_id')
     def _compute_attendee_count(self):
         self.attendee_count = len(self.attendee_ids)
+
+    @api.multi
+    @api.depends('name')
+    def _compute_website_url(self):
+        super(TripLocation, self)._compute_website_url()
+        for location in self:
+            if location.id:
+                location.website_url = '/trip/%s' % slug(location)
 
 
 class TripAttendee(models.Model):
