@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="project_stage_sale_1" model="project.task.type">
+            <field name="sequence">1</field>
+            <field name="name">Customer Enquiry</field>
+            <field name="legend_blocked">Tocard</field>
+            <field name="legend_priority">Customer Money</field>
+        </record>
+        <record id="project_stage_sale_2" model="project.task.type">
+            <field name="sequence">2</field>
+            <field name="name">Doing stuff</field>
+            <field name="legend_blocked">Stuff blocked</field>
+            <field name="legend_done">Stuff Done</field>
+        </record>
+
+        <record id="project_sale_1" model="project.project">
+            <field name="name">Steal Money to People</field>
+            <field name="alias_name">tde+project3</field>
+            <field name="privacy_visibility">employees</field>
+            <field name="type_ids" eval="[(4, ref('project_stage_sale_1')), (4, ref('project_stage_sale_2')), (4, ref('project_data.project_stage_3'))]"/>
+            <field name="user_id" ref="base_data.res_users_0"/>
+            <field name="favorite_user_ids" eval="[(4, ref('base_data.res_users_0')), (4, ref('base.user_root'))]"/>
+        </record>
+    </data>
+</odoo>

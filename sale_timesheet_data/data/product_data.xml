@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+		<record id="product_data.product_product_1_0" model="product.product">
+			<field name="track_service">task</field>
+			<field name="project_id" ref="project_sale_1"/>
+		</record>
+    </data>
+</odoo>

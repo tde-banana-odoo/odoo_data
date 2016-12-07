@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="0">
+    	<record id="sale_service_1" model="sale.order">
+			<field name="partner_id" ref="base_data.res_partner_4"/>
+			<field name="order_line" eval="[
+				(5, 0),
+				(0, 0, {
+					'product_id': ref('product_data.product_product_1_0'),
+					'product_uom_qty': 2.0,
+				})
+			]"/>
+		</record>
     </data>
 </odoo>

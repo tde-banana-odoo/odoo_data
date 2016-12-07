@@ -12,6 +12,8 @@ This module adds vigorous data. For my tests.
     """,
     'depends': ['sale_data', 'timesheet_data', 'sale_timesheet'],
     'data': [
+        'data/project_data.xml',
+        'data/product_data.xml',
         'data/sale_data.xml',
         'data/timesheet_data.xml',
     ],
