@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="mail_template_data_project_issue_1" model="mail.template">
+            <field name="name">Issue: Reception Acknowledgment</field>
+            <field name="subject">Reception of ${object.name}</field>
+            <field name="model_id" ref="project_issue.model_project_issue"/>
+            <field name="use_default_to" eval="True"/>
+            <field name="body_html" type="xml">
+<p>Dear ${object.partner_id.name or 'customer'},</p>
+<p>Thank you for your enquiry.<br /></p>
+<p>If you have any questions, please let us know.</p>
+<p>Best regards,</p></field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+
+        <record id="project_stage_issue_1" model="project.task.type">
+            <field name="sequence">1</field>
+            <field name="name">New</field>
+            <field name="mail_template_id" ref="mail_template_data_project_issue_1"/>
+            <field name="legend_blocked">Not validated</field>
+            <field name="legend_priority">Priority of Dev</field>
+        </record>
+        <record id="project_stage_issue_2" model="project.task.type">
+            <field name="sequence">2</field>
+            <field name="name">Dev</field>
+            <field name="legend_blocked">Technical Issue</field>
+            <field name="legend_done">Ready to Done</field>
+        </record>
+        <record id="project_stage_issue_3" model="project.task.type">
+            <field name="sequence">3</field>
+            <field name="name">Done</field>
+            <field name="legend_blocked">Wrong Dev</field>
+            <field name="legend_priority">Customer Appreciation</field>
+        </record>
+
+        <record id="project_data.project_1" model="project.project">
+            <field name="use_issues" eval="False"/>
+        </record>
+        <record id="project_data.project_2" model="project.project">
+            <field name="use_issues" eval="False"/>
+        </record>
+        <record id="project_3" model="project.project">
+            <field name="name">Open Support</field>
+            <field name="alias_name">tde+issue</field>
+            <field name="type_ids" eval="[(4, ref('project_stage_issue_1')), (4, ref('project_stage_issue_2')), (4, ref('project_stage_issue_3'))]"/>
+            <field name="user_id" ref="base_data.res_users_1"/>
+            <field name="favorite_user_ids" eval="[(5, 0)]"/>
+            <field name="use_tasks" eval="False"/>
+            <field name="use_issues" eval="True"/>
+            <field name="alias_model">project.issue</field>
+            <field name="partner_id" ref="base_data.res_partner_company_1"/>
+            <field name="privacy_visibility">portal</field>
+        </record>
+    </data>
+</odoo>

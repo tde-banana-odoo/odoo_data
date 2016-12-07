@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="calendar" model="resource.calendar">
+            <field name="name">40 Hours/Week</field>
+        </record>
+
+        <record id="resource_1_0" model="resource.resource">
+            <field name="name">Woodcutter</field>
+            <field eval="75" name="time_efficiency"/>
+            <field name="user_id" ref="base_data.res_users_0"/>
+            <field name="calendar_id" ref="calendar"/>
+            <field name="resource_type">user</field>
+        </record>
+        <record id="resource_1_1" model="resource.resource">
+            <field name="name">Sawer</field>
+            <field eval="100" name="time_efficiency"/>
+            <field name="user_id" ref="base_data.res_users_0"/>
+            <field name="calendar_id" ref="calendar"/>
+            <field name="resource_type">user</field>
+        </record>
+
+        <record id="calendar_attendance_1_1" model="resource.calendar.attendance">
+            <field name="name">Monday Morning</field>
+            <field name="dayofweek">0</field>
+            <field name="hour_from">08</field>
+            <field name="hour_to">12</field>
+            <field name="calendar_id" ref="calendar"/>
+        </record>
+        <record id="calendar_attendance_1_2" model="resource.calendar.attendance">
+            <field name="name">Monday Afternoon</field>
+            <field name="dayofweek">0</field>
+            <field name="hour_from">13</field>
+            <field name="hour_to">17</field>
+            <field name="calendar_id" ref="calendar"/>
+        </record>
+        <record id="calendar_attendance_2_1" model="resource.calendar.attendance">
+            <field name="name">Tuesday Morning</field>
+            <field name="dayofweek">1</field>
+            <field name="hour_from">08</field>
+            <field name="hour_to">12</field>
+            <field name="calendar_id" ref="calendar"/>
+        </record>
+        <record id="calendar_attendance_2_2" model="resource.calendar.attendance">
+            <field name="name">Tuesday Afternoon</field>
+            <field name="dayofweek">1</field>
+            <field name="hour_from">13</field>
+            <field name="hour_to">17</field>
+            <field name="calendar_id" ref="calendar"/>
+        </record>
+        <record id="calendar_attendance_3_1" model="resource.calendar.attendance">
+            <field name="name">Wednesday Morning</field>
+            <field name="dayofweek">2</field>
+            <field name="hour_from">08</field>
+            <field name="hour_to">12</field>
+            <field name="calendar_id" ref="calendar"/>
+        </record>
+        <record id="calendar_attendance_5_1" model="resource.calendar.attendance">
+            <field name="name">Friday Morning</field>
+            <field name="dayofweek">4</field>
+            <field name="hour_from">08</field>
+            <field name="hour_to">12</field>
+            <field name="calendar_id" ref="calendar"/>
+        </record>
+        <record id="calendar_attendance_5_2" model="resource.calendar.attendance">
+            <field name="name">Friday Afternoon</field>
+            <field name="dayofweek">4</field>
+            <field name="hour_from">13</field>
+            <field name="hour_to">17</field>
+            <field name="calendar_id" ref="calendar"/>
+        </record>
+        <record id="calendar_attendance_6_2" model="resource.calendar.attendance">
+            <field name="name">Saturday Night Fever</field>
+            <field name="dayofweek">5</field>
+            <field name="hour_from">19</field>
+            <field name="hour_to">23</field>
+            <field name="calendar_id" ref="calendar"/>
+        </record>
+
+        <record id="calendar_leave_1" model="resource.calendar.leaves">
+            <field name="name">International Wood Holidays</field>
+            <field name="date_from" eval="(DateTime.today() + relativedelta(days=2)).strftime('%Y-%m-%d 08:00:00')"/>
+            <field name="date_to" eval="(DateTime.today() + relativedelta(days=3)).strftime('%Y-%m-%d 12:00:00')"/>
+            <field name="calendar_id" ref="calendar"/>
+        </record>
+    </data>
+</odoo>

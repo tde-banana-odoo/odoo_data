@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="resource_calendar_0" model="resource.calendar">
+        <field name="name">North Corean Work</field>
+    </record>
+
+    <record id="resource_calendar_attendance_0_0_0" model="resource.calendar.attendance">
+        <field name="name">Monday Morning</field>
+        <field name="dayofweek">0</field>
+        <field name="hour_from">06</field>
+        <field name="hour_to">12</field>
+        <field name="calendar_id" ref="resource_calendar_0"/>
+    </record>
+    <record id="resource_calendar_attendance_0_0_1" model="resource.calendar.attendance">
+        <field name="name">Monday Afternoon</field>
+        <field name="dayofweek">0</field>
+        <field name="hour_from">13</field>
+        <field name="hour_to">17</field>
+        <field name="calendar_id" ref="resource_calendar_0"/>
+    </record>
+    <record id="resource_calendar_attendance_0_0_2" model="resource.calendar.attendance">
+        <field name="name">Monday Evening</field>
+        <field name="dayofweek">0</field>
+        <field name="hour_from">19</field>
+        <field name="hour_to">22</field>
+        <field name="calendar_id" ref="resource_calendar_0"/>
+    </record>
+    <record id="resource_calendar_attendance_0_1_0" model="resource.calendar.attendance">
+        <field name="name">Tuesday Morning</field>
+        <field name="dayofweek">1</field>
+        <field name="hour_from">06</field>
+        <field name="hour_to">12</field>
+        <field name="calendar_id" ref="resource_calendar_0"/>
+    </record>
+    <record id="resource_calendar_attendance_0_1_1" model="resource.calendar.attendance">
+        <field name="name">Tuesday Afternoon</field>
+        <field name="dayofweek">1</field>
+        <field name="hour_from">13</field>
+        <field name="hour_to">17</field>
+        <field name="calendar_id" ref="resource_calendar_0"/>
+    </record>
+    <record id="resource_calendar_attendance_0_1_2" model="resource.calendar.attendance">
+        <field name="name">Tuesday Evening</field>
+        <field name="dayofweek">1</field>
+        <field name="hour_from">19</field>
+        <field name="hour_to">22</field>
+        <field name="calendar_id" ref="resource_calendar_0"/>
+    </record>
+    <record id="resource_calendar_attendance_0_2_0" model="resource.calendar.attendance">
+        <field name="name">Thursday Morning</field>
+        <field name="dayofweek">1</field>
+        <field name="hour_from">06</field>
+        <field name="hour_to">12</field>
+        <field name="calendar_id" ref="resource_calendar_0"/>
+    </record>
+    <record id="resource_calendar_attendance_0_2_1" model="resource.calendar.attendance">
+        <field name="name">Thursday Afternoon</field>
+        <field name="dayofweek">1</field>
+        <field name="hour_from">13</field>
+        <field name="hour_to">17</field>
+        <field name="calendar_id" ref="resource_calendar_0"/>
+    </record>
+    <record id="resource_calendar_attendance_0_2_2" model="resource.calendar.attendance">
+        <field name="name">Thursday Evening</field>
+        <field name="dayofweek">1</field>
+        <field name="hour_from">19</field>
+        <field name="hour_to">22</field>
+        <field name="calendar_id" ref="resource_calendar_0"/>
+    </record>
+
+<!--     <record id="resource_analyst_leaves_demoleave1" model="resource.calendar.leaves">
+        <field name="name">2 Hours On Leave</field>
+        <field name="resource_id" ref="resource_analyst"/>
+        <field name="date_from" eval="time.strftime('%Y-%m-%d 08:00:00')"/>
+        <field name="date_to" eval="time.strftime('%Y-%m-%d 11:00:00')"/>
+        <field name="calendar_id" ref="resource_calendar_std"/>
+    </record>
+    
+    <record id="resource_dummyleave" model="resource.calendar.leaves">
+        <field name="name">Dummy Resource Leave</field>
+        <field name="resource_id" ref="resource_analyst"/>
+        <field name="date_from" eval="time.strftime('%Y-%m-%d 08:00:00')"/>
+        <field name="date_to" eval="time.strftime('%Y-%m-%d 11:00:00')"/>
+    </record> -->
+</odoo>
