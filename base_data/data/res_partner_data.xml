@@ -24,6 +24,7 @@
             <field name="phone">+555 11 22 33 44</field>
             <field name="email">admin@example.com</field>
             <field name="mobile">+555 44 33 22 11</field>
+            <field name="tz">Europe/Brussels</field>
             <field name="title" ref="base.res_partner_title_mister"/>
         </record>
         <record id="res_partner_user_0" model="res.partner">
