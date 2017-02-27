@@ -15,12 +15,5 @@
             <field name="calendar_id" ref="resource.resource_calendar_std"/>
             <field name="resource_type">user</field>
         </record>
-
-        <record id="calendar_leave_1" model="resource.calendar.leaves">
-            <field name="name">International Wood Holidays</field>
-            <field name="date_from" eval="(DateTime.today() + relativedelta(days=2)).strftime('%Y-%m-%d 08:00:00')"/>
-            <field name="date_to" eval="(DateTime.today() + relativedelta(days=3)).strftime('%Y-%m-%d 12:00:00')"/>
-            <field name="calendar_id" ref="resource.resource_calendar_std"/>
-        </record>
     </data>
 </odoo>
