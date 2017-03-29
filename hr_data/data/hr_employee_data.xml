@@ -4,5 +4,20 @@
         <record id="hr.employee_root" model="hr.employee">
             <field name="department_id" ref="hr.dep_administration"/>
         </record>
+
+        <record id="employee_user0" model="hr.employee">
+            <field name="user_id" ref="base_data.res_users_0"/>
+            <field name="parent_id" ref="hr.employee_root"/>
+        </record>
+
+        <record id="employee_user1" model="hr.employee">
+            <field name="user_id" ref="base_data.res_users_1"/>
+            <field name="parent_id" ref="employee_user0"/>
+        </record>
+
+        <record id="employee_user2" model="hr.employee">
+            <field name="user_id" ref="base_data.res_users_2"/>
+            <field name="parent_id" ref="employee_user1"/>
+        </record>
     </data>
 </odoo>
