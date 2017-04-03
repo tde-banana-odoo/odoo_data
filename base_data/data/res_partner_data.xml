@@ -19,7 +19,7 @@
         <record id="base.user_root" model="res.users">
             <field name="parent_id" eval="ref('base.main_partner')"/>
             <field name="image" type="base64" file="base_data/static/img/head_m_1.jpg"/>
-            <field name="notify_email">always</field>
+            <field name="notification_type">inbox</field>
             <field name="function">Über Boss</field>
             <field name="phone">+555 11 22 33 44</field>
             <field name="email">admin@example.com</field>
@@ -35,6 +35,7 @@
             <field name="parent_id" eval="ref('base.main_partner')"/>
             <field name="login">dummy0</field>
             <field name="password">dummy</field>
+            <field name="notification_type">inbox</field>
             <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
             <field name="image" type="base64" file="base_data/static/img/head_w_1.jpg"/>
             <field name="signature" type="xml"><p>--<br />Your Mega User</p></field>
@@ -51,6 +52,7 @@
             <field name="parent_id" eval="ref('base.main_partner')"/>
             <field name="login">dummy1</field>
             <field name="password">dummy</field>
+            <field name="notification_type">inbox</field>
             <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
             <field name="image" type="base64" file="base_data/static/img/head_m_2.jpg"/>
             <field name="signature" type="xml"><p>--<br />Your Power User</p></field>
@@ -67,6 +69,7 @@
             <field name="parent_id" eval="ref('base.main_partner')"/>
             <field name="login">dummy2</field>
             <field name="password">dummy</field>
+            <field name="notification_type">inbox</field>
             <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
             <field name="image" type="base64" file="base_data/static/img/head_w_2.jpg"/>
             <field name="signature" type="xml"><p>--<br />Your Low-End User</p></field>
@@ -79,6 +82,7 @@
             <field name="name">Portal User</field>
             <field name="login">dummy3</field>
             <field name="password">dummy</field>
+            <field name="notification_type">email</field>
             <field name="groups_id" eval="[(6, 0,  [ref('base.group_portal')])]"/>
             <field name="image" type="base64" file="base_data/static/img/head_misc_1.jpg"/>
             <field name="signature"><![CDATA[<p>--<br />Portal User</p>]]></field>
