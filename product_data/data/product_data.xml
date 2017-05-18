@@ -2,24 +2,81 @@
 <odoo>
     <data noupdate="0">
         <record id="product_product_0_0" model="product.product">
-            <field name="name">Buches de bois</field>
-            <field name="description">Avec pucerons et petites feuilles</field>
-            <field name="image" type="base64" file="product_data/static/img/wood_icon_512.png"/>
-            <field name="sequence">1</field>
+            <field name="name">Saw</field>
+            <field name="description">Nice teeths !</field>
+            <field name="image" type="base64" file="product_data/static/img/saw_icon_512.png"/>
+            <field name="sequence">100</field>
             <field name="type">consu</field>
-            <field name="default_code">PROD-01-01</field>
-            <field name="list_price">2.0</field>
-            <field name="standard_price">2.0</field>
+            <field name="default_code">PROD-00-00</field>
+            <field name="list_price">50.0</field>
+            <field name="standard_price">30.0</field>
+            <field name="uom_id" ref="product.product_uom_unit"/>
+            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="categ_id" ref="product.product_category_1"/>
+            <field name='weight'>2</field>
+        </record>
+        <record id="product_product_0_1" model="product.product">
+            <field name="name">Hammer</field>
+            <field name="description">Also usefull in case of zombipocalypse.</field>
+            <field name="image" type="base64" file="product_data/static/img/hammer_icon_512.png"/>
+            <field name="sequence">101</field>
+            <field name="type">consu</field>
+            <field name="default_code">PROD-00-01</field>
+            <field name="list_price">35.0</field>
+            <field name="standard_price">20.0</field>
+            <field name="uom_id" ref="product.product_uom_unit"/>
+            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="categ_id" ref="product.product_category_1"/>
+            <field name='weight'>3</field>
+        </record>
+        <record id="product_product_0_2" model="product.product">
+            <field name="name">Circular Saw</field>
+            <field name="description">More teeth. More electricity.</field>
+            <field name="image" type="base64" file="product_data/static/img/sawcircular_icon_512.png"/>
+            <field name="sequence">102</field>
+            <field name="type">consu</field>
+            <field name="default_code">PROD-00-02</field>
+            <field name="list_price">250.0</field>
+            <field name="standard_price">200.0</field>
             <field name="uom_id" ref="product.product_uom_unit"/>
             <field name="uom_po_id" ref="product.product_uom_unit"/>
             <field name="categ_id" ref="product.product_category_1"/>
             <field name='weight'>10</field>
         </record>
-        <record id="product_product_0_1" model="product.product">
-            <field name="name">Planches de bois</field>
-            <field name="description">Echardes comprises</field>
+
+        <record id="product_product_1_0" model="product.product">
+            <field name="name">Wood Logs</field>
+            <field name="description">With aphids and little leaves</field>
+            <field name="image" type="base64" file="product_data/static/img/wood_icon_512.png"/>
+            <field name="sequence">10</field>
+            <field name="type">consu</field>
+            <field name="default_code">PROD-01-00</field>
+            <field name="list_price">2.0</field>
+            <field name="standard_price">2.0</field>
+            <field name="uom_id" ref="product.product_uom_unit"/>
+            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="categ_id" ref="product.product_category_1"/>
+            <field name='weight'>25</field>
+        </record>
+        <record id="product_product_1_1" model="product.product">
+            <field name="name">Wood Planks</field>
+            <field name="description">Splinters inside</field>
             <field name="image" type="base64" file="product_data/static/img/plank_icon_512.png"/>
-            <field name="sequence">2</field>
+            <field name="sequence">11</field>
+            <field name="type">consu</field>
+            <field name="default_code">PROD-01-01</field>
+            <field name="list_price">10.0</field>
+            <field name="standard_price">5.0</field>
+            <field name="uom_id" ref="product.product_uom_unit"/>
+            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="categ_id" ref="product.product_category_1"/>
+            <field name='weight'>3</field>
+        </record>
+        <record id="product_product_1_2" model="product.product">
+            <field name="name">Wood Sticks</field>
+            <field name="description">Those are sharp.</field>
+            <field name="image" type="base64" file="product_data/static/img/stick_icon_512.png"/>
+            <field name="sequence">12</field>
             <field name="type">consu</field>
             <field name="default_code">PROD-01-02</field>
             <field name="list_price">10.0</field>
@@ -27,30 +84,16 @@
             <field name="uom_id" ref="product.product_uom_unit"/>
             <field name="uom_po_id" ref="product.product_uom_unit"/>
             <field name="categ_id" ref="product.product_category_1"/>
-            <field name='weight'>5</field>
-        </record>
-        <record id="product_product_0_10" model="product.product">
-            <field name="name">Scie</field>
-            <field name="description">Quelles grandes dents !</field>
-            <field name="image" type="base64" file="product_data/static/img/saw_icon_512.png"/>
-            <field name="sequence">10</field>
-            <field name="type">consu</field>
-            <field name="default_code">PROD-01-11</field>
-            <field name="list_price">10.0</field>
-            <field name="standard_price">8.0</field>
-            <field name="uom_id" ref="product.product_uom_unit"/>
-            <field name="uom_po_id" ref="product.product_uom_unit"/>
-            <field name="categ_id" ref="product.product_category_1"/>
-            <field name='weight'>5</field>
+            <field name='weight'>1</field>
         </record>
 
-        <record id="product_product_1_0" model="product.product">
-            <field name="name">Bûcheron</field>
-            <field name="description">Il a sa chemise à carreaux</field>
+        <record id="product_product_2_0" model="product.product">
+            <field name="name">Lumber</field>
+            <field name="description">Includes a checked shirt</field>
             <field name="image" type="base64" file="product_data/static/img/woodcutter_icon_512.png"/>
             <field name="sequence">20</field>
             <field name="type">service</field>
-            <field name="default_code">SERV-01-01</field>
+            <field name="default_code">SERV-00-00</field>
             <field name="list_price">25.0</field>
             <field name="standard_price">10.0</field>
             <field name="uom_id" ref="product.product_uom_hour"/>
@@ -59,13 +102,13 @@
             <field name='weight'>5</field>
         </record>
 
-        <record id="product_product_2_0" model="product.product">
+        <record id="product_product_3_0" model="product.product">
             <field name="name">Baseball Bat</field>
-            <field name="description">For balls</field>
+            <field name="description">Homerun</field>
             <field name="image" type="base64" file="product_data/static/img/baseballbat_icon_512.png"/>
             <field name="sequence">30</field>
             <field name="type">consu</field>
-            <field name="default_code">PROD-02-01</field>
+            <field name="default_code">PROD-03-00</field>
             <field name="list_price">10.0</field>
             <field name="standard_price">8.0</field>
             <field name="uom_id" ref="product.product_uom_unit"/>
@@ -73,13 +116,13 @@
             <field name="categ_id" ref="product.product_category_1"/>
             <field name='weight'>3</field>
         </record>
-        <record id="product_product_2_1" model="product.product">
+        <record id="product_product_3_1" model="product.product">
             <field name="name">Nails</field>
             <field name="description">Sharpy</field>
             <field name="image" type="base64" file="product_data/static/img/nail_icon_512.png"/>
             <field name="sequence">31</field>
             <field name="type">consu</field>
-            <field name="default_code">CONS-02-01</field>
+            <field name="default_code">CONS-03-00</field>
             <field name="list_price">3.0</field>
             <field name="standard_price">2.0</field>
             <field name="uom_id" ref="product.product_uom_dozen"/>
@@ -87,13 +130,13 @@
             <field name="categ_id" ref="product.product_category_1"/>
             <field name='weight'>0.1</field>
         </record>
-        <record id="product_product_2_2" model="product.product">
+        <record id="product_product_3_2" model="product.product">
             <field name="name">Nailed Bat</field>
-            <field name="description">For balls. The other ones.</field>
+            <field name="description">Zombie homerun.</field>
             <field name="image" type="base64" file="product_data/static/img/baseballbat_icon_512.png"/>
             <field name="sequence">32</field>
             <field name="type">consu</field>
-            <field name="default_code">PROD-02-02</field>
+            <field name="default_code">PROD-03-01</field>
             <field name="list_price">30.0</field>
             <field name="standard_price">20.0</field>
             <field name="uom_id" ref="product.product_uom_unit"/>
@@ -102,33 +145,33 @@
             <field name='weight'>4</field>
         </record>
 
-        <record id="product_product_3_0" model="product.product">
-            <field name="name">Livraison par Chauve Souris</field>
-            <field name="description">Ils ne sont pas borgnes.</field>
+        <record id="product_product_4_0" model="product.product">
+            <field name="name">Bat Delivery</field>
+            <field name="description">Don't do the signal, not necessary.</field>
             <field name="image" type="base64" file="product_data/static/img/bat_icon_512.png"/>
             <field name="sequence">40</field>
             <field name="type">service</field>
-            <field name="default_code">SERV-02-01</field>
+            <field name="default_code">SERV-04-00</field>
             <field name="list_price">5.0</field>
             <field name="standard_price">3.0</field>
             <field name="uom_id" ref="product.product_uom_hour"/>
             <field name="uom_po_id" ref="product.product_uom_hour"/>
             <field name="categ_id" ref="product.product_category_all"/>
-            <field name='weight'>4</field>
+            <field name='weight'>0</field>
         </record>
-        <record id="product_product_3_1" model="product.product">
-            <field name="name">Livraison par Mule</field>
-            <field name="description">Ils sont un peu bêtes, mais très affectueux.</field>
+        <record id="product_product_4_1" model="product.product">
+            <field name="name">Mule Delivery</field>
+            <field name="description">Those are very friendly.</field>
             <field name="image" type="base64" file="product_data/static/img/donkey_icon_512.png"/>
             <field name="sequence">41</field>
             <field name="type">service</field>
-            <field name="default_code">SERV-02-02</field>
+            <field name="default_code">SERV-04-01</field>
             <field name="list_price">25.0</field>
             <field name="standard_price">13.0</field>
             <field name="uom_id" ref="product.product_uom_day"/>
             <field name="uom_po_id" ref="product.product_uom_day"/>
             <field name="categ_id" ref="product.product_category_all"/>
-            <field name='weight'>4</field>
+            <field name='weight'>0</field>
         </record>
 
     </data>
