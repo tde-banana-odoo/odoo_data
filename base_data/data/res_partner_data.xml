@@ -20,8 +20,8 @@
         </record>
         <record id="base.user_root" model="res.users">
             <field name="parent_id" eval="ref('base.main_partner')"/>
-            <field name="image" type="base64" file="base_data/static/img/head_m_1.jpg"/>
-            <field name="notify_email">always</field>
+            <field name="image" type="base64" file="base_data/static/img/people_man_gen_0.jpg"/>
+            <field name="notification_type">inbox</field>
             <field name="function">Über Boss</field>
             <field name="phone">+32 987 65 43 21</field>
             <field name="mobile">+32 987 65 43 21</field>
