@@ -7,40 +7,49 @@
             <field name="sequence">1</field>
         </record>
         <record id="hr_recruitment_stage_1" model="hr.recruitment.stage">
-            <field name="name">Accepted</field>
+            <field name="name">Interview</field>
             <field name="sequence">10</field>
         </record>
         <record id="hr_recruitment_stage_2" model="hr.recruitment.stage">
-            <field name="name">Spam</field>
+            <field name="name">Accepted</field>
+            <field name="template_id" ref="hr_recruitment.email_template_data_applicant_interest"/>
             <field name="sequence">20</field>
+        </record>
+        <record id="hr_recruitment_stage_3" model="hr.recruitment.stage">
+            <field name="name">Refused</field>
+            <field name="sequence">30</field>
+            <field name="template_id" ref="hr_recruitment.email_template_data_applicant_refuse"/>
+            <field name="fold" eval="True"/>
+        </record>
+        <record id="hr_recruitment_stage_4" model="hr.recruitment.stage">
+            <field name="name">Spam</field>
+            <field name="sequence">40</field>
             <field name="fold" eval="True"/>
         </record>
 
-        <record id="hr_recruitment_stage_0_1" model="hr.recruitment.stage">
-            <field name="name">Oiling</field>
-            <field name="sequence">2</field>
-            <field name="job_id" ref="hr_data.hr_job_0"/>
-            <field name="template_id" ref="hr_recruitment.email_template_data_applicant_interest"/>
-        </record>
-        <record id="hr_recruitment_stage_0_2" model="hr.recruitment.stage">
-            <field name="name">Not My Axe</field>
+        <record id="hr_recruitment_stage_2_0" model="hr.recruitment.stage">
+            <field name="name">Technical Test</field>
             <field name="sequence">15</field>
-            <field name="job_id" ref="hr_data.hr_job_0"/>
-            <field name="template_id" ref="hr_recruitment.email_template_data_applicant_refuse"/>
+            <field name="job_id" ref="hr_data.hr_job_2"/>
+        </record>
+        <record id="hr_recruitment_stage_3_0" model="hr.recruitment.stage">
+            <field name="name">Interview with sales</field>
+            <field name="sequence">12</field>
+            <field name="job_id" ref="hr_data.hr_job_3"/>
         </record>
 
-        <record id="hr_applicant_0" model="hr.applicant">
-            <field name="name">I'm Oiled and I Love It</field>
+        <record id="hr_applicant_2_0" model="hr.applicant">
+            <field name="name">I am fully oiled</field>
             <field name="email_from">michel@example.com</field>
             <field name="stage_id" ref="hr_recruitment_stage_0"/>
-            <field name="job_id" ref="hr_data.hr_job_0"/>
+            <field name="job_id" ref="hr_data.hr_job_2"/>
         </record>
-        <record id="hr_applicant_1" model="hr.applicant">
-            <field name="name">Poil Application</field>
-            <field name="partner_id" ref="base_data.res_partner_1_2"/>
+        <record id="hr_applicant_2_1" model="hr.applicant">
+            <field name="name">Dalia Gloin Application</field>
+            <field name="partner_id" ref="base_data.res_partner_1_1"/>
             <field name="user_id" ref="base_data.res_users_0"/>
             <field name="stage_id" ref="hr_recruitment_stage_0"/>
-            <field name="job_id" ref="hr_data.hr_job_0"/>
+            <field name="job_id" ref="hr_data.hr_job_2"/>
         </record>
     </data>
 </odoo>
