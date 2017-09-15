@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="0">
+        <!-- User-based employees -->
         <record id="hr.employee_root" model="hr.employee">
             <field name="department_id" ref="hr.dep_administration"/>
             <field name="gender">male</field>
             <field name="marital">widower</field>
             <field name="address_id" ref="base.main_partner"/>
         </record>
-
         <record id="employee_user0" model="hr.employee">
-            <field name="name">Mega User</field>
+            <field name="name">Christine Mega Employee</field>
             <field name="user_id" ref="base_data.res_users_0"/>
             <field name="parent_id" ref="hr.employee_root"/>
             <field name="gender">female</field>
             <field name="marital">single</field>
             <field name="address_id" ref="base.main_partner"/>
         </record>
-
         <record id="employee_user1" model="hr.employee">
-            <field name="name">Power User</field>
+            <field name="name">Jean-Paul Power Employee</field>
             <field name="user_id" ref="base_data.res_users_1"/>
             <field name="parent_id" ref="employee_user0"/>
             <field name="gender">male</field>
             <field name="marital">married</field>
             <field name="address_id" ref="base.main_partner"/>
         </record>
-
         <record id="employee_user2" model="hr.employee">
-            <field name="name">Low User</field>
+            <field name="name">Brigitte Low Employee</field>
             <field name="user_id" ref="base_data.res_users_2"/>
             <field name="parent_id" ref="employee_user1"/>
             <field name="gender">other</field>
@@ -35,17 +33,83 @@
             <field name="address_id" ref="base.main_partner"/>
         </record>
 
+        <!-- Non user employees -->
+        <record id="employee_0_address" model="res.partner">
+            <field name="name">Jean Talus</field>
+            <field name="parent_id" eval="ref('base.main_partner')"/>
+            <field name="image" type="base64" file="hr_data/static/img/people_man_lumber_0.jpg"/>
+            <field name="street">Place de la Cathédrale 6</field>
+            <field name="zip">4000</field>
+            <field name="city">Liège</field>
+            <field name="country_id" ref="base.be"/>
+        </record>
+        <record id="employee_0" model="hr.employee">
+            <field name="name">Jean Talus</field>
+            <field name="address_home_id" ref="hr_data.employee_0_address"/>
+            <field name="address_id" ref="base.main_partner"/>
+            <field name="job_id" ref="hr_job_1"/>
+            <field name="department_id" ref="dep_rd"/>
+        </record>
+        <record id="employee_1_address" model="res.partner">
+            <field name="name">Raoul Poilobidet</field>
+            <field name="parent_id" eval="ref('base.main_partner')"/>
+            <field name="image" type="base64" file="hr_data/static/img/people_man_hipster_0.jpg"/>
+            <field name="street">Place de la Cathédrale 6</field>
+            <field name="zip">4000</field>
+            <field name="city">Liège</field>
+            <field name="country_id" ref="base.be"/>
+        </record>
+        <record id="employee_1" model="hr.employee">
+            <field name="name">Raoul Poilobidet</field>
+            <field name="address_home_id" ref="hr_data.employee_1_address"/>
+            <field name="address_id" ref="base.main_partner"/>
+            <field name="job_id" ref="hr_job_2"/>
+            <field name="department_id" ref="dep_rd"/>
+        </record>
+        <record id="employee_2_address" model="res.partner">
+            <field name="name">Patricia Fromage</field>
+            <field name="parent_id" eval="ref('base.main_partner')"/>
+            <field name="image" type="base64" file="hr_data/static/img/people_woman_lumber_0.jpg"/>
+            <field name="street">Place de la Cathédrale 6</field>
+            <field name="zip">4000</field>
+            <field name="city">Liège</field>
+            <field name="country_id" ref="base.be"/>
+        </record>
+        <record id="employee_2" model="hr.employee">
+            <field name="name">Patricia Fromage</field>
+            <field name="address_home_id" ref="hr_data.employee_2_address"/>
+            <field name="address_id" ref="base.main_partner"/>
+            <field name="job_id" ref="hr_job_1"/>
+            <field name="department_id" ref="dep_rd"/>
+        </record>
+        <record id="employee_3_address" model="res.partner">
+            <field name="name">Jeanine Lapolissone</field>
+            <field name="parent_id" eval="ref('base.main_partner')"/>
+            <field name="image" type="base64" file="hr_data/static/img/people_woman_lumber_1.jpg"/>
+            <field name="street">Place de la Cathédrale 6</field>
+            <field name="zip">4000</field>
+            <field name="city">Liège</field>
+            <field name="country_id" ref="base.be"/>
+        </record>
+        <record id="employee_3" model="hr.employee">
+            <field name="name">Jeanine Lapolissone</field>
+            <field name="address_home_id" ref="hr_data.employee_3_address"/>
+            <field name="address_id" ref="base.main_partner"/>
+            <field name="job_id" ref="hr_job_1"/>
+            <field name="department_id" ref="dep_rd"/>
+        </record>
+    </data>
+
+    <data noupdate="0">
         <!-- Update departments -->
         <record id="hr.dep_administration" model="hr.department">
             <field name="manager_id" ref="hr.employee_root"/>
         </record>
-
         <record id="hr.dep_sales" model="hr.department">
             <field name="manager_id" ref="employee_user0"/>
         </record>
-
         <record id="dep_rd" model="hr.department">
-            <field name="manager_id" ref="employee_user1"/>
+            <field name="manager_id" ref="employee_user0"/>
         </record>
     </data>
 </odoo>
