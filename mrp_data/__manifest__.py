@@ -15,6 +15,6 @@ This module adds vigorous data. For my tests.
         'data/resource_data.xml',
         'data/product_data.xml',
     ],
-    'installable': False,
-    'auto_install': False,
+    'installable': True,
+    'auto_install': True,
 }
