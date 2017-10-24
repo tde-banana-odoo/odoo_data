@@ -13,6 +13,7 @@ This module adds vigorous data. For my tests.
     'depends': ['base_data', 'mail'],
     'data': [
         'data/configuration_data.xml',
+        'data/configuration_data_private.xml',  # comment if necessary
     ],
     'installable': True,
     'auto_install': True,
