@@ -9,14 +9,12 @@
             <field name="country_id" ref="base.be"/>
             <field name="phone">+32 987 65 43 21</field>
             <field name="mobile">+32 987 65 43 21</field>
-            <field name="fax">+32 987 65 43 21</field>
             <field name="email">wow@example.com</field>
             <field name="website">www.example.com</field>
             <field name="image" type="base64" file="base_data/static/img/logo_plant.jpg"/>
         </record>
         <record id="base.main_company" model="res.company">
             <field name="name">Woody Cutters</field>
-            <field name="rml_header1">And my amazing axe</field>
         </record>
         <record id="base.user_root" model="res.users">
             <field name="parent_id" eval="ref('base.main_partner')"/>
@@ -25,7 +23,6 @@
             <field name="function">Über Boss</field>
             <field name="phone">+32 987 65 43 21</field>
             <field name="mobile">+32 987 65 43 21</field>
-            <field name="fax">+32 987 65 43 21</field>
             <field name="email">admin@example.com</field>
             <field name="tz">Europe/Brussels</field>
             <field name="title" ref="base.res_partner_title_mister"/>
@@ -45,7 +42,6 @@
             <field name="function">Mega User</field>
             <field name="phone">+32 987 65 43 21</field>
             <field name="mobile">+32 987 65 43 21</field>
-            <field name="fax">+32 987 65 43 21</field>
             <field name="email">user0@example.com</field>
         </record>
         <record id="res_partner_user_1" model="res.partner">
@@ -63,7 +59,6 @@
             <field name="function">Power User</field>
             <field name="phone">+32 987 65 43 21</field>
             <field name="mobile">+32 987 65 43 21</field>
-            <field name="fax">+32 987 65 43 21</field>
             <field name="email">user1@example.com</field>
         </record>
         <record id="res_partner_user_2" model="res.partner">
@@ -81,11 +76,14 @@
             <field name="function">Low-end User</field>
             <field name="phone">+32 987 65 43 21</field>
             <field name="mobile">+32 987 65 43 21</field>
-            <field name="fax">+32 987 65 43 21</field>
             <field name="email">user2@example.com</field>
         </record>
         <record id="res_partner_user_3" model="res.partner">
-            <field name="name">Cheng PortalUser</field>
+            <field name="name">Olivier PortalUser</field>
+            <field name="street">Piazza di Porta Ravegnana</field>
+            <field name="zip">40126</field>
+            <field name="city">Bologna BO</field>
+            <field name="country_id" ref="base.it"/>
         </record>
         <record id="res_users_3" model="res.users">
             <field name="partner_id" eval="res_partner_user_3"/>
@@ -96,9 +94,8 @@
             <field name="image" type="base64" file="base_data/static/img/people_misc_0.jpg"/>
             <field name="signature"><![CDATA[<p>--<br />Portal User</p>]]></field>
             <field name="function">Portal User</field>
-            <field name="phone">+32 987 65 43 21</field>
-            <field name="mobile">+32 987 65 43 21</field>
-            <field name="fax">+32 987 65 43 21</field>
+            <field name="phone">+39 051 123 4567</field>
+            <field name="mobile">+39 051 765 4321</field>
             <field name="email">portal@example.com</field>
         </record>
     </data>
