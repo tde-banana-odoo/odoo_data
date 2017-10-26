@@ -1,4 +1,5 @@
 # private files
+base_data/data/res_partner_data_private.xml
 base_data/data/res_partner_data_private_10.xml
 base_data/data/res_partner_data_private_11.xml
 mail_data/data/configuration_data_private.xml
