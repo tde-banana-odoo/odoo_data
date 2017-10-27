@@ -7,7 +7,7 @@
     'category': 'Tools',
     'complexity': 'easy',
     'description': """""",
-    'depends': ['base_private_data', 'payment_authorize'],
+    'depends': ['base_data', 'payment_authorize'],
     'data': [
         'data/configuration_data_private.xml',  # comment if necessary
     ],

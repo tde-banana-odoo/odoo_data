@@ -7,7 +7,7 @@
     'category': 'Tools',
     'complexity': 'easy',
     'description': """""",
-    'depends': ['base_private_data', 'payment_ogone'],
+    'depends': ['base_data', 'payment_ogone'],
     'data': [
         'data/configuration_data_private.xml',  # comment if necessary
     ],
