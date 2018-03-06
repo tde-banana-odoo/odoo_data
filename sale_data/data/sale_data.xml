@@ -8,17 +8,16 @@
             <field name="user_id" ref="base_data.res_users_1"/>
             <field name="team_id" ref="sales_team.salesteam_website_sales"/>
             <field name="date_order" eval="(DateTime.today() - relativedelta(days=4)).strftime('%Y-%m-%d %H:%M')"/>
-            <field name="order_line" eval="[
-	(5, 0),
-	(0, 0, {
-		'product_id': ref('product_data.product_product_1_1'),
-		'product_uom_qty': 3,
-	}),
-	(0, 0, {
-		'product_id': ref('product_data.product_product_4_0'),
-		'product_uom_qty': 1,
-	}),
-]"/>
+        </record>
+        <record id="sales_order_portal_0_line_0" model="sale.order.line">
+            <field name="order_id" ref="sale_data.sales_order_portal_0"/>
+            <field name="product_id" ref="product_data.product_product_1_1"/>
+            <field name="product_uom_qty">3</field>
+        </record>
+        <record id="sales_order_portal_0_line_1" model="sale.order.line">
+            <field name="order_id" ref="sale_data.sales_order_portal_0"/>
+            <field name="product_id" ref="product_data.product_product_4_0"/>
+            <field name="product_uom_qty">1</field>
         </record>
     </data>
 </odoo>
