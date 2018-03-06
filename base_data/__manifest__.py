@@ -14,6 +14,7 @@ This module adds vigorous data. For my tests.
     'data': [
         'data/res_partner_data.xml',
         'data/configuration_data.xml',
+        'data/res_partner_data_private.xml',  # comment me if necessary
     ],
     'installable': True,
     'auto_install': False,
