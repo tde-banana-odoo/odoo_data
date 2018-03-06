@@ -3,10 +3,11 @@
     <data noupdate="0">
         <!-- User-based employees -->
         <record id="hr.employee_root" model="hr.employee">
-            <field name="department_id" ref="hr.dep_administration"/>
             <field name="gender">male</field>
             <field name="marital">widower</field>
             <field name="address_id" ref="base.main_partner"/>
+            <field name="department_id" ref="hr.dep_administration"/>
+            <field name="job_id" ref="hr_job_0"/>
         </record>
         <record id="employee_user0" model="hr.employee">
             <field name="name">Christine Mega Employee</field>
@@ -15,6 +16,8 @@
             <field name="gender">female</field>
             <field name="marital">single</field>
             <field name="address_id" ref="base.main_partner"/>
+            <field name="department_id" ref="hr.dep_administration"/>
+            <field name="job_id" ref="hr_job_0"/>
         </record>
         <record id="employee_user1" model="hr.employee">
             <field name="name">Jean-Paul Power Employee</field>
@@ -23,6 +26,8 @@
             <field name="gender">male</field>
             <field name="marital">married</field>
             <field name="address_id" ref="base.main_partner"/>
+            <field name="department_id" ref="dep_rd"/>
+            <field name="job_id" ref="hr_job_2"/>
         </record>
         <record id="employee_user2" model="hr.employee">
             <field name="name">Brigitte Low Employee</field>
@@ -31,6 +36,8 @@
             <field name="gender">other</field>
             <field name="marital">divorced</field>
             <field name="address_id" ref="base.main_partner"/>
+            <field name="department_id" ref="hr.dep_sales"/>
+            <field name="job_id" ref="hr_job_3"/>
         </record>
 
         <!-- Non user employees -->
