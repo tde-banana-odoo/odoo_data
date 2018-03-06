@@ -10,8 +10,8 @@
             <field name="default_code">PROD-00-00</field>
             <field name="list_price">50.0</field>
             <field name="standard_price">30.0</field>
-            <field name="uom_id" ref="product.product_uom_unit"/>
-            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="categ_id" ref="product.product_category_1"/>
             <field name='weight'>2</field>
         </record>
@@ -24,8 +24,8 @@
             <field name="default_code">PROD-00-01</field>
             <field name="list_price">35.0</field>
             <field name="standard_price">20.0</field>
-            <field name="uom_id" ref="product.product_uom_unit"/>
-            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="categ_id" ref="product.product_category_1"/>
             <field name='weight'>3</field>
         </record>
@@ -38,8 +38,8 @@
             <field name="default_code">PROD-00-02</field>
             <field name="list_price">250.0</field>
             <field name="standard_price">200.0</field>
-            <field name="uom_id" ref="product.product_uom_unit"/>
-            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="categ_id" ref="product.product_category_1"/>
             <field name='weight'>10</field>
         </record>
@@ -53,8 +53,8 @@
             <field name="default_code">PROD-01-00</field>
             <field name="list_price">2.0</field>
             <field name="standard_price">2.0</field>
-            <field name="uom_id" ref="product.product_uom_unit"/>
-            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="categ_id" ref="product.product_category_1"/>
             <field name='weight'>25</field>
         </record>
@@ -67,8 +67,8 @@
             <field name="default_code">PROD-01-01</field>
             <field name="list_price">10.0</field>
             <field name="standard_price">5.0</field>
-            <field name="uom_id" ref="product.product_uom_unit"/>
-            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="categ_id" ref="product.product_category_1"/>
             <field name='weight'>3</field>
         </record>
@@ -81,8 +81,8 @@
             <field name="default_code">PROD-01-02</field>
             <field name="list_price">10.0</field>
             <field name="standard_price">5.0</field>
-            <field name="uom_id" ref="product.product_uom_unit"/>
-            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="categ_id" ref="product.product_category_1"/>
             <field name='weight'>1</field>
         </record>
@@ -96,8 +96,8 @@
             <field name="default_code">SERV-00-00</field>
             <field name="list_price">25.0</field>
             <field name="standard_price">10.0</field>
-            <field name="uom_id" ref="product.product_uom_hour"/>
-            <field name="uom_po_id" ref="product.product_uom_hour"/>
+            <field name="uom_id" ref="uom.product_uom_hour"/>
+            <field name="uom_po_id" ref="uom.product_uom_hour"/>
             <field name="categ_id" ref="product.product_category_1"/>
             <field name='weight'>5</field>
         </record>
@@ -111,8 +111,8 @@
             <field name="default_code">PROD-03-00</field>
             <field name="list_price">10.0</field>
             <field name="standard_price">8.0</field>
-            <field name="uom_id" ref="product.product_uom_unit"/>
-            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="categ_id" ref="product.product_category_1"/>
             <field name='weight'>3</field>
         </record>
@@ -125,8 +125,8 @@
             <field name="default_code">CONS-03-00</field>
             <field name="list_price">3.0</field>
             <field name="standard_price">2.0</field>
-            <field name="uom_id" ref="product.product_uom_dozen"/>
-            <field name="uom_po_id" ref="product.product_uom_dozen"/>
+            <field name="uom_id" ref="uom.product_uom_dozen"/>
+            <field name="uom_po_id" ref="uom.product_uom_dozen"/>
             <field name="categ_id" ref="product.product_category_1"/>
             <field name='weight'>0.1</field>
         </record>
@@ -139,8 +139,8 @@
             <field name="default_code">PROD-03-01</field>
             <field name="list_price">30.0</field>
             <field name="standard_price">20.0</field>
-            <field name="uom_id" ref="product.product_uom_unit"/>
-            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="categ_id" ref="product.product_category_1"/>
             <field name='weight'>4</field>
         </record>
@@ -154,8 +154,8 @@
             <field name="default_code">SERV-04-00</field>
             <field name="list_price">5.0</field>
             <field name="standard_price">3.0</field>
-            <field name="uom_id" ref="product.product_uom_hour"/>
-            <field name="uom_po_id" ref="product.product_uom_hour"/>
+            <field name="uom_id" ref="uom.product_uom_hour"/>
+            <field name="uom_po_id" ref="uom.product_uom_hour"/>
             <field name="categ_id" ref="product.product_category_all"/>
             <field name='weight'>0</field>
         </record>
@@ -168,8 +168,8 @@
             <field name="default_code">SERV-04-01</field>
             <field name="list_price">25.0</field>
             <field name="standard_price">13.0</field>
-            <field name="uom_id" ref="product.product_uom_day"/>
-            <field name="uom_po_id" ref="product.product_uom_day"/>
+            <field name="uom_id" ref="uom.product_uom_day"/>
+            <field name="uom_po_id" ref="uom.product_uom_day"/>
             <field name="categ_id" ref="product.product_category_all"/>
             <field name='weight'>0</field>
         </record>
