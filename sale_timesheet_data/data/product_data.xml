@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="0">
-		<record id="product_data.product_product_1_0" model="product.product">
-			<field name="track_service">task</field>
-			<field name="project_id" ref="project_sale_1"/>
+		<record id="product_data.product_product_services_0" model="product.product">
+			<field name="service_policy">delivered_timesheet</field>
+			<field name="service_tracking">task_global_project</field>
+			<field name="project_id" ref="sale_timesheet_data.project_sale_0"/>
+		</record>
+		<record id="product_data.product_product_services_1" model="product.product">
+			<field name="service_policy">ordered_timesheet</field>
+			<field name="service_tracking">task_global_project</field>
+			<field name="project_id" ref="sale_timesheet_data.project_sale_0"/>
+		</record>
+		<record id="product_data.product_product_services_2" model="product.product">
+			<field name="service_policy">delivered_manual</field>
+			<field name="service_tracking">task_new_project</field>
+			<field name="project_template_id" ref="sale_timesheet_data.project_sale_template_0"/>
 		</record>
     </data>
 </odoo>
