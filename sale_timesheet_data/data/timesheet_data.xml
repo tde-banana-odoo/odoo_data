@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="0">
+        <!-- <record id="timesheet_0_0" model="account.analytic.line">
+        	<field name="name">Install Oven Cabinet</field>
+            <field name="employee_id" ref="hr_data.employee_user0"/>
+            <field name="task_id" search="[('sale_line_id', '=', ref('sale_order_service_0_line_1'))]"/> -->
+            <!-- <field name="project_id" search="[('sale_line_id', '=', ref('project_sale_0'))]"/> -->
+            <!-- <field name="date" eval="(DateTime.now() + relativedelta(days=-1)).strftime('%Y-%m-%d')"/>
+            <field name="unit_amount">2.00</field>
+        </record>  -->
     </data>
 </odoo>

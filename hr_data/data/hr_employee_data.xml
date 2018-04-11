@@ -80,7 +80,7 @@
         </record>
         <record id="employee_1" model="hr.employee">
             <field name="name">Caroline Lunes</field>
-            <field name="address_home_id" ref="hr_data.employee_2_address"/>
+            <field name="address_home_id" ref="hr_data.employee_1_address"/>
             <field name="address_id" ref="base.main_partner"/>
             <field name="image" type="base64" file="hr_data/static/img/people_woman_lumber_0.jpg"/>
             <field name="job_id" ref="hr_job_1"/>
@@ -103,7 +103,7 @@
         </record>
         <record id="employee_2" model="hr.employee">
             <field name="name">Lorie Poiret</field>
-            <field name="address_home_id" ref="hr_data.employee_3_address"/>
+            <field name="address_home_id" ref="hr_data.employee_2_address"/>
             <field name="address_id" ref="base.main_partner"/>
             <field name="image" type="base64" file="hr_data/static/img/people_woman_lumber_1.jpg"/>
             <field name="job_id" ref="hr_job_1"/>
@@ -127,7 +127,7 @@
         </record>
         <record id="employee_3" model="hr.employee">
             <field name="name">Nicolas Reblochon</field>
-            <field name="address_home_id" ref="hr_data.employee_1_address"/>
+            <field name="address_home_id" ref="hr_data.employee_3_address"/>
             <field name="address_id" ref="base.main_partner"/>
             <field name="image" type="base64" file="hr_data/static/img/people_man_hipster_0.jpg"/>
             <field name="job_id" ref="hr_job_2"/>

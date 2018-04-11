@@ -70,10 +70,10 @@
             <field name="favorite_user_ids" eval="[(5, 0)]"/>
         </record>
 
-        <function model="project.project" name="message_subscribe_users"
-            eval="[ref('project_1'), ref('project_2')], [ref('base_data.res_users_1')]"/>
-            <function model="project.project" name="message_subscribe_users"
-            eval="[ref('project_2')], [ref('base_data.res_users_3')]"/>
+        <function model="project.project" name="message_subscribe"
+            eval="[ref('project_1'), ref('project_2')], [ref('base_data.res_partner_user_1')]"/>
+        <function model="project.project" name="message_subscribe"
+            eval="[ref('project_2')], [ref('base_data.res_partner_user_3')]"/>
 
         <record id="project_task_1" model="project.task">
             <field name="name">5 Feets Table</field>

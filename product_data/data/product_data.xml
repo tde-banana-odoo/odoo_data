@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- Categories -->
     <data noupdate="0">
+        <record id="product_category_0" model="product.category">
+            <field name="name">Kitchen / Furniture</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+    </data>
+
+    <data noupdate="0">
+        <!-- Kitchen / Furniture related -->
+        <record id="product_product_services_0" model="product.product">
+            <field name="name">Kitchen Furniture Installation</field>
+            <field name="description">Includes about 90% of required screws</field>
+            <field name="image" type="base64" file="product_data/static/img/product_services_kitchen_icon_512.jpg"/>
+            <field name="categ_id" ref="product_data.product_category_0"/>
+            <field name="sequence">110</field>
+            <field name="type">service</field>
+            <field name="default_code">SERV-10-DEL-00</field>
+            <field name="list_price">50.0</field>
+            <field name="standard_price">30.0</field>
+            <field name="uom_id" ref="product.product_uom_hour"/>
+            <field name="uom_po_id" ref="product.product_uom_hour"/>
+            <field name="weight">0</field>
+        </record>
+        <record id="product_product_services_1" model="product.product">
+            <field name="name">Workplan Cutting</field>
+            <field name="description">It does not cost an arm. Just a finger.</field>
+            <field name="image" type="base64" file="product_data/static/img/product_services_kitchen_icon_512.jpg"/>
+            <field name="categ_id" ref="product_data.product_category_0"/>
+            <field name="sequence">111</field>
+            <field name="type">service</field>
+            <field name="default_code">SERV-10-ORD-00</field>
+            <field name="list_price">35.0</field>
+            <field name="standard_price">20.0</field>
+            <field name="uom_id" ref="product.product_uom_hour"/>
+            <field name="uom_po_id" ref="product.product_uom_hour"/>
+            <field name="weight">0</field>
+        </record>
+        <record id="product_product_services_2" model="product.product">
+            <field name="name">Customer Assistance</field>
+            <field name="description">Handle customer enquiries. Get paid for it.</field>
+            <field name="image" type="base64" file="product_data/static/img/product_services_kitchen_icon_512.jpg"/>
+            <field name="categ_id" ref="product_data.product_category_0"/>
+            <field name="sequence">112</field>
+            <field name="type">service</field>
+            <field name="default_code">SERV-10-MAN-00</field>
+            <field name="list_price">20.0</field>
+            <field name="standard_price">15.0</field>
+            <field name="uom_id" ref="product.product_uom_hour"/>
+            <field name="uom_po_id" ref="product.product_uom_hour"/>
+            <field name="weight">0</field>
+        </record>
+
         <record id="product_product_0_0" model="product.product">
             <field name="name">Saw</field>
             <field name="description">Nice teeths !</field>

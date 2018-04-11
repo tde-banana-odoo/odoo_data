@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- Template or Timesheet data -->
+    <data noupdate="0">
+        <record id="project_stage_sale_template_0" model="project.task.type">
+            <field name="sequence">1</field>
+            <field name="name">Customer Enquiry</field>
+            <field name="legend_blocked">Unclear</field>
+            <field name="legend_done">Enquiry Clear</field>
+        </record>
+        <record id="project_stage_sale_template_1" model="project.task.type">
+            <field name="sequence">2</field>
+            <field name="name">Solve Issue</field>
+            <field name="legend_blocked">Question</field>
+            <field name="legend_done">Issue solve, waiting customer approval</field>
+        </record>
+        <record id="project_stage_sale_template_2" model="project.task.type">
+            <field name="sequence">3</field>
+            <field name="name">Done</field>
+            <field name="legend_blocked">Customer Unhappy</field>
+            <field name="legend_done">Done once for all</field>
+        </record>
+
+        <record id="project_sale_template_0" model="project.project">
+            <field name="name">Customer Kitchen Installation</field>
+            <field name="alias_name" eval="False"/>
+            <field name="privacy_visibility">portal</field>
+            <field name="type_ids" eval="[(4, ref('project_stage_sale_template_0')), (4, ref('project_stage_sale_template_1')), (4, ref('project_stage_sale_template_2'))]"/>
+            <field name="user_id"></field>
+            <field name="favorite_user_ids" eval="False"/>
+        </record>
+    </data>
+
+    <!-- Regular data -->
     <data noupdate="0">
         <record id="project_stage_sale_1" model="project.task.type">
             <field name="sequence">1</field>
@@ -14,8 +46,8 @@
             <field name="legend_done">Stuff Done</field>
         </record>
 
-        <record id="project_sale_1" model="project.project">
-            <field name="name">Steal Money to People</field>
+        <record id="project_sale_0" model="project.project">
+            <field name="name">Sustainable Wood Kitchens Installation</field>
             <field name="alias_name">tde+project3</field>
             <field name="privacy_visibility">employees</field>
             <field name="type_ids" eval="[(4, ref('project_stage_sale_1')), (4, ref('project_stage_sale_2')), (4, ref('project_data.project_stage_3'))]"/>
