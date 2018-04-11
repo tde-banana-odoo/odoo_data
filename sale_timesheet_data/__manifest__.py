@@ -10,7 +10,7 @@
 This module adds vigorous data. For my tests.
 ==============================================
     """,
-    'depends': ['sale_data', 'timesheet_data', 'sale_timesheet'],
+    'depends': ['l10n_be', 'sale_data', 'timesheet_data', 'sale_timesheet'],
     'data': [
         'data/project_data.xml',
         'data/product_data.xml',
