@@ -52,7 +52,7 @@
             <field name="privacy_visibility">employees</field>
             <field name="type_ids" eval="[(4, ref('project_stage_sale_1')), (4, ref('project_stage_sale_2')), (4, ref('project_data.project_stage_3'))]"/>
             <field name="user_id" ref="base_data.res_users_0"/>
-            <field name="favorite_user_ids" eval="[(4, ref('base_data.res_users_0')), (4, ref('base.user_root'))]"/>
+            <field name="favorite_user_ids" eval="[(4, ref('base_data.res_users_0')), (4, ref('base.user_admin'))]"/>
         </record>
     </data>
 </odoo>
