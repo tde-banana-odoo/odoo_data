@@ -3,9 +3,8 @@
     <data noupdate="0">
         <record id="fetch_mail_server_odoo" model="fetchmail.server">
             <field name="name">imap.openerp.com</field>
-            <field name="type">imap</field>
+            <field name="server_type">imap</field>
             <field name="server">imap.openerp.com</field>
-            <field name="type">imap</field>
             <field name="is_ssl" eval="True"/>
             <field name="port">993</field>
             <field name="user">dummy</field>
