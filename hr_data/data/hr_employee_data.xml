@@ -2,13 +2,20 @@
 <odoo>
     <data noupdate="0">
         <!-- User-based employees -->
+        <!-- Management: direction -->
         <record id="hr.employee_root" model="hr.employee">
             <field name="gender">male</field>
             <field name="marital">widower</field>
             <field name="address_id" ref="base.main_partner"/>
             <field name="department_id" ref="hr.dep_administration"/>
             <field name="job_id" ref="hr_job_0"/>
+            <field name="country_id" ref="base.be"/>
+            <field name="work_location">Never Remote</field>
+            <field name="work_email">admin@example.com</field>
+            <field name="work_phone">0001</field>
+            <field name="mobile_phone">+32 485 11 22 33</field>
         </record>
+        <!-- Management: direction -->
         <record id="employee_user0" model="hr.employee">
             <field name="name">Christine MegaEmployee</field>
             <field name="user_id" ref="base_data.res_users_0"/>
@@ -16,9 +23,16 @@
             <field name="gender">female</field>
             <field name="marital">single</field>
             <field name="address_id" ref="base.main_partner"/>
+            <field name="address_home_id" ref="base_data.res_partner_user_0"/>
             <field name="department_id" ref="hr.dep_administration"/>
             <field name="job_id" ref="hr_job_0"/>
+            <field name="country_id" ref="base.be"/>
+            <field name="work_location">Direction Office</field>
+            <field name="work_email">user0@example.com</field>
+            <field name="work_phone">0002</field>
+            <field name="mobile_phone">+32 485 11 22 33</field>
         </record>
+        <!-- R&D: Carpenter -->
         <record id="employee_user1" model="hr.employee">
             <field name="name">Antoine PowerEmployee</field>
             <field name="user_id" ref="base_data.res_users_1"/>
@@ -26,9 +40,16 @@
             <field name="gender">male</field>
             <field name="marital">married</field>
             <field name="address_id" ref="base.main_partner"/>
+            <field name="address_home_id" ref="base_data.res_partner_user_1"/>
             <field name="department_id" ref="dep_rd"/>
             <field name="job_id" ref="hr_job_2"/>
+            <field name="country_id" ref="base.be"/>
+            <field name="work_location">Carpenter Office</field>
+            <field name="work_email">user1@example.com</field>
+            <field name="work_phone">0003</field>
+            <field name="mobile_phone">+32 485 11 22 33</field>
         </record>
+        <!-- S&S: Sales -->
         <record id="employee_user2" model="hr.employee">
             <field name="name">Laetitia LowEmployee</field>
             <field name="user_id" ref="base_data.res_users_2"/>
@@ -36,8 +57,14 @@
             <field name="gender">other</field>
             <field name="marital">divorced</field>
             <field name="address_id" ref="base.main_partner"/>
+            <field name="address_home_id" ref="base_data.res_partner_user_2"/>
             <field name="department_id" ref="hr.dep_sales"/>
             <field name="job_id" ref="hr_job_3"/>
+            <field name="country_id" ref="base.be"/>
+            <field name="work_location">Sales Office</field>
+            <field name="work_email">user2@example.com</field>
+            <field name="work_phone">0004</field>
+            <field name="mobile_phone">+32 485 11 22 33</field>
         </record>
 
     </data>
@@ -45,55 +72,61 @@
         <!-- Non user employees -->
         <!-- R&D: Wood Cutter -->
         <record id="employee_0_address" model="res.partner">
-            <field name="name">Fabien Tartaldjotte</field>
+            <field name="name">Jon Snow</field>
             <field name="parent_id" eval="ref('base.main_partner')"/>
-            <field name="image" type="base64" file="hr_data/static/img/people_man_lumber_0.jpg"/>
+            <field name="image" type="base64" file="hr_data/static/img/gt_jon.jpg"/>
             <field name="type">other</field>
-            <field name="function">Employee</field>
+            <field name="function">Wood Cutter</field>
             <field name="street">Place de la Cathédrale 6</field>
             <field name="zip">4000</field>
             <field name="city">Liège</field>
             <field name="country_id" ref="base.be"/>
         </record>
         <record id="employee_0" model="hr.employee">
-            <field name="name">Fabien Tartaldjotte</field>
+            <field name="name">Jon Snow</field>
             <field name="address_home_id" ref="hr_data.employee_0_address"/>
             <field name="address_id" ref="base.main_partner"/>
-            <field name="image" type="base64" file="hr_data/static/img/people_man_lumber_0.jpg"/>
+            <field name="gender">male</field>
+            <field name="marital">single</field>
+            <field name="image" type="base64" file="hr_data/static/img/gt_jon.jpg"/>
             <field name="job_id" ref="hr_job_1"/>
             <field name="department_id" ref="dep_rd"/>
-            <field name="work_location">Main Office</field>
-            <field name="work_email">fabien@example.com</field>
+            <field name="parent_id" ref="employee_user1"/>
+            <field name="work_location">Cutter Office</field>
+            <field name="work_email">jon@example.com</field>
             <field name="work_phone">0010</field>
             <field name="mobile_phone">+32 485 11 22 33</field>
         </record>
         <record id="employee_1_address" model="res.partner">
-            <field name="name">Caroline Lunes</field>
+            <field name="name">Margaery Tyrell</field>
             <field name="parent_id" eval="ref('base.main_partner')"/>
-            <field name="image" type="base64" file="hr_data/static/img/people_woman_lumber_0.jpg"/>
+            <field name="image" type="base64" file="hr_data/static/img/gt_margaery.jpg"/>
             <field name="type">other</field>
-            <field name="function">Employee</field>
+            <field name="function">Wood Cutter</field>
             <field name="street">Place de la Cathédrale 6</field>
             <field name="zip">4000</field>
             <field name="city">Liège</field>
             <field name="country_id" ref="base.be"/>
         </record>
         <record id="employee_1" model="hr.employee">
-            <field name="name">Caroline Lunes</field>
+            <field name="name">Margaery Tyrell</field>
             <field name="address_home_id" ref="hr_data.employee_1_address"/>
             <field name="address_id" ref="base.main_partner"/>
-            <field name="image" type="base64" file="hr_data/static/img/people_woman_lumber_0.jpg"/>
+            <field name="gender">female</field>
+            <field name="marital">widower</field>
+            <field name="image" type="base64" file="hr_data/static/img/gt_margaery.jpg"/>
             <field name="job_id" ref="hr_job_1"/>
             <field name="department_id" ref="dep_rd"/>
-            <field name="work_location">Main Office</field>
-            <field name="work_email">caroline@example.com</field>
+            <field name="parent_id" ref="employee_0"/>
+            <field name="work_location">Cutter Office</field>
+            <field name="work_email">margaery@example.com</field>
             <field name="work_phone">0010</field>
             <field name="mobile_phone">+32 485 11 22 33</field>
         </record>
         <record id="employee_2_address" model="res.partner">
-            <field name="name">Lorie Poiret</field>
+            <field name="name">Davos Seaworth</field>
             <field name="parent_id" eval="ref('base.main_partner')"/>
-            <field name="image" type="base64" file="hr_data/static/img/people_woman_lumber_1.jpg"/>
+            <field name="image" type="base64" file="hr_data/static/img/gt_davos.jpg"/>
             <field name="type">other</field>
             <field name="function">Employee</field>
             <field name="street">Place de la Cathédrale 6</field>
@@ -102,22 +135,25 @@
             <field name="country_id" ref="base.be"/>
         </record>
         <record id="employee_2" model="hr.employee">
-            <field name="name">Lorie Poiret</field>
+            <field name="name">Davos Seaworth</field>
             <field name="address_home_id" ref="hr_data.employee_2_address"/>
             <field name="address_id" ref="base.main_partner"/>
-            <field name="image" type="base64" file="hr_data/static/img/people_woman_lumber_1.jpg"/>
+            <field name="gender">male</field>
+            <field name="marital">married</field>
+            <field name="image" type="base64" file="hr_data/static/img/gt_davos.jpg"/>
             <field name="job_id" ref="hr_job_1"/>
             <field name="department_id" ref="dep_rd"/>
-            <field name="work_location">Main Office</field>
-            <field name="work_email">lorie@example.com</field>
+            <field name="parent_id" ref="employee_0"/>
+            <field name="work_location">Cutter Office</field>
+            <field name="work_email">davos@example.com</field>
             <field name="work_phone">0010</field>
             <field name="mobile_phone">+32 485 11 22 33</field>
         </record>
         <!-- R&D: Carpenter / Architect -->
         <record id="employee_3_address" model="res.partner">
-            <field name="name">Nicolas Reblochon</field>
+            <field name="name">Daenerys Targaryen</field>
             <field name="parent_id" eval="ref('base.main_partner')"/>
-            <field name="image" type="base64" file="hr_data/static/img/people_man_hipster_0.jpg"/>
+            <field name="image" type="base64" file="hr_data/static/img/gt_daenerys.jpg"/>
             <field name="type">other</field>
             <field name="function">Employee</field>
             <field name="street">Place de la Cathédrale 6</field>
@@ -126,20 +162,73 @@
             <field name="country_id" ref="base.be"/>
         </record>
         <record id="employee_3" model="hr.employee">
-            <field name="name">Nicolas Reblochon</field>
+            <field name="name">Daenerys Targaryen</field>
             <field name="address_home_id" ref="hr_data.employee_3_address"/>
             <field name="address_id" ref="base.main_partner"/>
-            <field name="image" type="base64" file="hr_data/static/img/people_man_hipster_0.jpg"/>
+            <field name="gender">female</field>
+            <field name="marital">cohabitant</field>
+            <field name="image" type="base64" file="hr_data/static/img/gt_daenerys.jpg"/>
             <field name="job_id" ref="hr_job_2"/>
             <field name="department_id" ref="dep_rd"/>
-            <field name="work_location">Main Office</field>
-            <field name="work_email">nicolas@example.com</field>
+            <field name="parent_id" ref="employee_user1"/>
+            <field name="work_location">Carpenter Office</field>
+            <field name="work_email">daenerys@example.com</field>
             <field name="work_phone">0010</field>
             <field name="mobile_phone">+32 485 11 22 33</field>
         </record>
-
-
-
+        <record id="employee_4_address" model="res.partner">
+            <field name="name">Sansa Stark</field>
+            <field name="parent_id" eval="ref('base.main_partner')"/>
+            <field name="image" type="base64" file="hr_data/static/img/gt_sansa.jpg"/>
+            <field name="type">other</field>
+            <field name="function">Employee</field>
+            <field name="street">Place de la Cathédrale 6</field>
+            <field name="zip">4000</field>
+            <field name="city">Liège</field>
+            <field name="country_id" ref="base.be"/>
+        </record>
+        <record id="employee_4" model="hr.employee">
+            <field name="name">Sansa Stark</field>
+            <field name="address_home_id" ref="hr_data.employee_3_address"/>
+            <field name="address_id" ref="base.main_partner"/>
+            <field name="gender">female</field>
+            <field name="marital">single</field>
+            <field name="image" type="base64" file="hr_data/static/img/gt_sansa.jpg"/>
+            <field name="job_id" ref="hr_job_2"/>
+            <field name="department_id" ref="dep_rd"/>
+            <field name="parent_id" ref="employee_3"/>
+            <field name="work_location">Carpenter Office</field>
+            <field name="work_email">sansa@example.com</field>
+            <field name="work_phone">0010</field>
+            <field name="mobile_phone">+32 485 11 22 33</field>
+        </record>
+        <!-- S&S: Sales -->
+        <record id="employee_5_address" model="res.partner">
+            <field name="name">Tyrion Lannister</field>
+            <field name="parent_id" eval="ref('base.main_partner')"/>
+            <field name="image" type="base64" file="hr_data/static/img/gt_tyrion.jpg"/>
+            <field name="type">other</field>
+            <field name="function">Employee</field>
+            <field name="street">Place de la Cathédrale 6</field>
+            <field name="zip">4000</field>
+            <field name="city">Liège</field>
+            <field name="country_id" ref="base.be"/>
+        </record>
+        <record id="employee_5" model="hr.employee">
+            <field name="name">Tyrion Lannister</field>
+            <field name="address_home_id" ref="hr_data.employee_3_address"/>
+            <field name="address_id" ref="base.main_partner"/>
+            <field name="gender">male</field>
+            <field name="marital">single</field>
+            <field name="image" type="base64" file="hr_data/static/img/gt_tyrion.jpg"/>
+            <field name="job_id" ref="hr_job_2"/>
+            <field name="department_id" ref="hr.dep_sales"/>
+            <field name="parent_id" ref="employee_user0"/>
+            <field name="work_location">Sales Office</field>
+            <field name="work_email">tyrion@example.com</field>
+            <field name="work_phone">0010</field>
+            <field name="mobile_phone">+32 485 11 22 33</field>
+        </record>
     </data>
 
     <data noupdate="0">
@@ -151,7 +240,7 @@
             <field name="manager_id" ref="employee_user0"/>
         </record>
         <record id="dep_rd" model="hr.department">
-            <field name="manager_id" ref="employee_user0"/>
+            <field name="manager_id" ref="employee_user1"/>
         </record>
     </data>
 </odoo>

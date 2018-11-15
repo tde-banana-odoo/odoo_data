@@ -2,7 +2,11 @@
 base_data/data/res_partner_data_private.xml
 base_data/data/res_partner_data_private_10.xml
 base_data/data/res_partner_data_private_11.xml
+base_data/data/res_partner_data_private_12.xml
+base_data/data/configuration_data_private.xml
 mail_data/data/configuration_data_private.xml
+mail_data/data/configuration_data_private_11.xml
+mail_data/data/configuration_data_private_12.xml
 payment_authorize_data/data/configuration_data_private.xml
 payment_ogone_data/data/configuration_data_private.xml
 payment_paypal_data/data/configuration_data_private.xml
