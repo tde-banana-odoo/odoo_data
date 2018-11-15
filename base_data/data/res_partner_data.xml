@@ -29,6 +29,8 @@
         </record>
         <record id="res_partner_user_0" model="res.partner">
             <field name="name">Christine MegaUser</field>
+            <field name="title" ref="base.res_partner_title_miss"/>
+            <field name="tz">Europe/Brussels</field>
         </record>
         <record id="res_users_0" model="res.users">
             <field name="partner_id" eval="res_partner_user_0"/>
@@ -38,14 +40,16 @@
             <field name="notification_type">inbox</field>
             <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
             <field name="image" type="base64" file="base_data/static/img/people_woman_user_0.jpg"/>
-            <field name="signature" type="xml"><p>--<br />Your Mega User</p></field>
-            <field name="function">Mega User</field>
+            <field name="signature" type="xml"><p>--<br />Christine MegaUser</p></field>
+            <field name="function">Sales Manager</field>
             <field name="phone">+32 987 65 43 21</field>
             <field name="mobile">+32 987 65 43 21</field>
             <field name="email">user0@example.com</field>
         </record>
         <record id="res_partner_user_1" model="res.partner">
             <field name="name">Antoine PowerUser</field>
+            <field name="tz">Europe/Brussels</field>
+            <field name="title" ref="base.res_partner_title_mister"/>
         </record>
         <record id="res_users_1" model="res.users">
             <field name="partner_id" eval="res_partner_user_1"/>
@@ -55,14 +59,16 @@
             <field name="notification_type">inbox</field>
             <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
             <field name="image" type="base64" file="base_data/static/img/people_man_user_1.jpg"/>
-            <field name="signature" type="xml"><p>--<br />Your Power User</p></field>
-            <field name="function">Power User</field>
+            <field name="signature" type="xml"><p>--<br />Antoine PowerUser</p></field>
+            <field name="function">R&amp;D Manager</field>
             <field name="phone">+32 987 65 43 21</field>
             <field name="mobile">+32 987 65 43 21</field>
             <field name="email">user1@example.com</field>
         </record>
         <record id="res_partner_user_2" model="res.partner">
             <field name="name">Laetitia LowUser</field>
+            <field name="tz">Europe/Brussels</field>
+            <field name="title" ref="base.res_partner_title_miss"/>
         </record>
         <record id="res_users_2" model="res.users">
             <field name="partner_id" eval="res_partner_user_2"/>
@@ -72,8 +78,8 @@
             <field name="notification_type">inbox</field>
             <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
             <field name="image" type="base64" file="base_data/static/img/people_woman_user_1.jpg"/>
-            <field name="signature" type="xml"><p>--<br />Your Low-End User</p></field>
-            <field name="function">Low-end User</field>
+            <field name="signature" type="xml"><p>--<br />Laetitia LowUser</p></field>
+            <field name="function">Customer Relationship</field>
             <field name="phone">+32 987 65 43 21</field>
             <field name="mobile">+32 987 65 43 21</field>
             <field name="email">user2@example.com</field>
@@ -647,27 +653,27 @@
             <field name="website">www.example.com</field>
         </record>
 
-        <!-- SEVENTH COMPANY: AGROLAIT, GENERIC BUYERS, BE -->
+        <!-- SEVENTH COMPANY: KAAMOGROTT, GENERIC BUYERS, BE -->
         <record id="res_partner_company_6" model="res.partner">
-            <field name="name">Agrolait SA</field>
+            <field name="name">Kaamogrott SA</field>
             <field name="is_company" eval="True"/>
             <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/logo_chair.jpg"/>
+            <field name="image" type="base64" file="base_data/static/img/logo_kaamegrott.jpg"/>
             <field name="street">Rue Montagne aux Herbes Potagères 7</field>
             <field name="zip">1000</field>
             <field name="city">Bruxelles</field>
             <field name="country_id" ref="base.be"/>
             <field name="phone">+32 02 513 11 22</field>
             <field name="mobile">+32 02 513 22 11</field>
-            <field name="email">agrolait@example.com</field>
+            <field name="email">kaamogrott@example.com</field>
             <field name="website">www.example.com</field>
         </record>
         <record id="res_partner_6_0" model="res.partner">
-            <field name="name">Mevanwi de Vannes</field>
-            <field name="title" ref="base.res_partner_title_miss"/>
+            <field name="name">Leodegrance de Carmelide</field>
+            <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_6')"/>
             <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_carpenter_0.jpg"/>
+            <field name="image" type="base64" file="base_data/static/img/k_leodagan.jpg"/>
             <field name="type">contact</field>
             <field name="function">CEO</field>
             <field name="street">Rue Montagne aux Herbes Potagères 7</field>
@@ -676,7 +682,7 @@
             <field name="country_id" ref="base.be"/>
             <field name="phone">+32 02 513 11 22</field>
             <field name="mobile">+32 02 513 22 11</field>
-            <field name="email">agrolait+mevanwi@example.com</field>
+            <field name="email">kaamogrott+leodagan@example.com</field>
             <field name="website">www.example.com</field>
         </record>
         <record id="res_partner_6_1" model="res.partner">
@@ -684,24 +690,41 @@
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_6')"/>
             <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_viking_1.jpg"/>
-            <field name="type">invoice</field>
-            <field name="function">Accountant</field>
+            <field name="image" type="base64" file="base_data/static/img/k_karadoc.jpg"/>
+            <field name="type">delivery</field>
+            <field name="function">Horse Master</field>
             <field name="street">Rue Montagne aux Herbes Potagères 7</field>
             <field name="zip">1000</field>
             <field name="city">Bruxelles</field>
             <field name="country_id" ref="base.be"/>
             <field name="phone">+32 02 513 11 22</field>
             <field name="mobile">+32 02 513 22 11</field>
-            <field name="email">agrolait+karadoc@example.com</field>
+            <field name="email">kaamogrott+karadoc@example.com</field>
             <field name="website">www.example.com</field>
         </record>
         <record id="res_partner_6_2" model="res.partner">
-            <field name="name">Provencal de Gaules</field>
-            <field name="title" ref="base.res_partner_title_mister"/>
+            <field name="name">Mevanwi de Vannes</field>
+            <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_6')"/>
             <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_lumber_1.jpg"/>
+            <field name="image" type="base64" file="base_data/static/img/k_mevanwi.jpg"/>
+            <field name="type">invoice</field>
+            <field name="function">CFO</field>
+            <field name="street">Rue Montagne aux Herbes Potagères 7</field>
+            <field name="zip">1000</field>
+            <field name="city">Bruxelles</field>
+            <field name="country_id" ref="base.be"/>
+            <field name="phone">+32 02 513 11 22</field>
+            <field name="mobile">+32 02 513 22 11</field>
+            <field name="email">kaamogrott+mevanwi@example.com</field>
+            <field name="website">www.example.com</field>
+        </record>
+        <record id="res_partner_6_3" model="res.partner">
+            <field name="name">Guenièvre de Carmelide</field>
+            <field name="title" ref="base.res_partner_title_miss"/>
+            <field name="parent_id" eval="ref('res_partner_company_6')"/>
+            <field name="customer" eval="True"/>
+            <field name="image" type="base64" file="base_data/static/img/k_guenievre.jpg"/>
             <field name="type">other</field>
             <field name="function">CTO</field>
             <field name="street">Rue Montagne aux Herbes Potagères 7</field>
@@ -710,7 +733,24 @@
             <field name="country_id" ref="base.be"/>
             <field name="phone">+32 02 513 11 22</field>
             <field name="mobile">+32 02 513 22 11</field>
-            <field name="email">agrolait+provencal@example.com</field>
+            <field name="email">kaamogrott+guenievre@example.com</field>
+            <field name="website">www.example.com</field>
+        </record>
+        <record id="res_partner_6_4" model="res.partner">
+            <field name="name">Provencal de Gaulle</field>
+            <field name="title" ref="base.res_partner_title_mister"/>
+            <field name="parent_id" eval="ref('res_partner_company_6')"/>
+            <field name="customer" eval="True"/>
+            <field name="image" type="base64" file="base_data/static/img/k_perceval.jpg"/>
+            <field name="type">other</field>
+            <field name="function">Vraie Patte du Pays de Galles</field>
+            <field name="street">Rue Montagne aux Herbes Potagères 7</field>
+            <field name="zip">1000</field>
+            <field name="city">Bruxelles</field>
+            <field name="country_id" ref="base.be"/>
+            <field name="phone">+32 02 513 11 22</field>
+            <field name="mobile">+32 02 513 22 11</field>
+            <field name="email">kaamogrott+perceval@example.com</field>
             <field name="website">www.example.com</field>
         </record>
     </data>
@@ -881,7 +921,7 @@
         <record id="res_partner_user_3" model="res.partner">
             <field name="name">Eliane PortalUser</field>
             <field name="title" ref="base.res_partner_title_miss"/>
-            <field name="parent_id" eval="ref('res_partner_company_6')"/>
+            <field name="parent_id" eval="ref('res_partner_company_1')"/>
             <field name="customer" eval="True"/>
             <field name="image" type="base64" file="base_data/static/img/people_woman_user_2.jpg"/>
             <field name="type">other</field>
