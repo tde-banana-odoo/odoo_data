@@ -366,6 +366,40 @@
             <field name="email">tree+eloise@example.com</field>
             <field name="website">www.example.com</field>
         </record>
+        <record id="res_partner_2_4" model="res.partner">
+            <field name="name">David CourrielCassé</field>
+            <field name="title" ref="base.res_partner_title_mister"/>
+            <field name="parent_id" eval="ref('res_partner_company_2')"/>
+            <field name="customer" eval="True"/>
+            <field name="image" type="base64" file="base_data/static/img/people_man_flower_2.jpg"/>
+            <field name="type">other</field>
+            <field name="function">Broken Email Guy</field>
+            <field name="street">Place d'Youville, 995</field>
+            <field name="zip">QC G1R 3P1</field>
+            <field name="city">Ville de Quebec</field>
+            <field name="country_id" ref="base.ca"/>
+            <field name="phone">+1 418 123 4567</field>
+            <field name="mobile">+1 418 765 4321</field>
+            <field name="email">broken</field>
+            <field name="website">www.example.com</field>
+        </record>
+        <record id="res_partner_2_5" model="res.partner">
+            <field name="name">Virginie BouncyBubble</field>
+            <field name="title" ref="base.res_partner_title_miss"/>
+            <field name="parent_id" eval="ref('res_partner_company_2')"/>
+            <field name="customer" eval="True"/>
+            <field name="image" type="base64" file="base_data/static/img/people_woman_flower_0.jpg"/>
+            <field name="type">other</field>
+            <field name="function">Bouncer Email Woman</field>
+            <field name="street">Place d'Youville, 995</field>
+            <field name="zip">QC G1R 3P1</field>
+            <field name="city">Ville de Quebec</field>
+            <field name="country_id" ref="base.ca"/>
+            <field name="phone">+1 418 123 4567</field>
+            <field name="mobile">+1 418 765 4321</field>
+            <field name="email">bouncetest@tribulant.com</field>
+            <field name="website">www.example.com</field>
+        </record>
 
         <!-- FOURTH COMPANY: FLOWERS BUYERS, DE -->
         <record id="res_partner_company_3" model="res.partner">
