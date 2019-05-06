@@ -28,8 +28,6 @@
 
     <function model="marketing.campaign" name="action_start_campaign"
         eval="[[ref('marketing_campaign_0')]]"/>
-    <function model="marketing.campaign" name="sync_participants"
-        eval="[[ref('marketing_campaign_0')]]"/>
 
 </data>
 </odoo>
