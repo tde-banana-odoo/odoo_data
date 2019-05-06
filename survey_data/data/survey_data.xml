@@ -1,8 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="0">
-    	<record id="survey_0" model="survey.survey">
-    		<field name="title">Satisfaction Survey</field>
-    	</record>
+        <record id="survey_0" model="survey.survey">
+            <field name="title">Satisfaction Survey</field>
+            <field name="stage_id" ref="survey.stage_in_progress"/>
+            <field name="auth_required" eval="False"/>
+            <field name="users_can_go_back" eval="True"/>
+            <field name="quizz_mode" eval="True"/>
+            <field name="description" type="html">
+<p>This survey allows you to give a feedback about your experience with our eCommerce solution.
+    Filling it helps us improving your experience.</p></field>
+            <field name="thank_you_message" type="html"><p>Thanks you !</p></field>
+        </record>
+
+        <record id="survey_page_0" model="survey.page">
+            <field name="title">About yourself</field>
+            <field name="survey_id" ref="survey_0"/>
+            <field name="sequence">1</field>
+            <field name="description" type="html">
+<p>This section is about general informations about you. Answering them helps understanding your background and qualifying your answers.</p></field>
+        </record>
+        <record id="survey_page_0_q1" model="survey.question">
+            <field name="page_id" ref="survey_page_0"/>
+            <field name="sequence">1</field>
+            <field name="question">Where and when did you hear from us ?</field>
+            <field name="type">free_text</field>
+            <field name="constr_mandatory" eval="False"/>
+        </record>
+        <record id="survey_page_0_q2" model="survey.question">
+            <field name="page_id" ref="survey_page_0"/>
+            <field name="sequence">2</field>
+            <field name="question">In which country do you live ?</field>
+            <field name="type">textbox</field>
+            <field name="constr_mandatory" eval="False"/>
+        </record>
+	    <record id="survey_page_0_q3" model="survey.question">
+            <field name="page_id" ref="survey_page_0"/>
+            <field name="sequence">3</field>
+            <field name="question">What is your email address (3-15 char) ?</field>
+            <field name="type">textbox</field>
+            <field name="constr_mandatory" eval="True"/>
+            <field name="validation_required" eval="True"/>
+            <field name="validation_email" eval="True"/>
+            <field name="validation_length_min">3</field>
+            <field name="validation_length_max">15</field>
+        </record>
+        <record id="survey_page_0_q4" model="survey.question">
+            <field name="page_id" ref="survey_page_0"/>
+            <field name="sequence">4</field>
+            <field name="question">How much children do you have (0-5) ?</field>
+            <field name="type">numerical_box</field>
+            <field name="constr_mandatory" eval="True"/>
+            <field name="validation_required" eval="True"/>
+            <field name="validation_min_float_value">0</field>
+            <field name="validation_max_float_value">5</field>
+        </record>
+        <record id="survey_page_0_q5" model="survey.question">
+            <field name="page_id" ref="survey_page_0"/>
+            <field name="sequence">5</field>
+            <field name="question">When is your birthday ?</field>
+            <field name="type">date</field>
+            <field name="constr_mandatory" eval="False"/>
+            <field name="validation_required" eval="False"/>
+        </record>
+        <record id="survey_page_0_q6" model="survey.question">
+            <field name="page_id" ref="survey_page_0"/>
+            <field name="sequence">6</field>
+            <field name="question">When do you want to receive information from us ?</field>
+            <field name="type">date</field>
+            <field name="constr_mandatory" eval="True"/>
+            <field name="validation_required" eval="True"/>
+            <field name="validation_min_date" eval="DateTime.today() - relativedelta(weeks=1)"/>
+            <field name="validation_max_date" eval="DateTime.today() + relativedelta(weeks=1)"/>
+        </record>
+
+        <record id="survey_page_1" model="survey.page">
+            <field name="title">About your sales</field>
+            <field name="survey_id" ref="survey_0"/>
+            <field name="sequence">2</field>
+            <field name="description" type="html">
+<p>This section is about our eCommerce experience itself.</p></field>
+        </record>
+        <record id="survey_page_1_q0" model="survey.question">
+            <field name="page_id" ref="survey_page_1"/>
+            <field name="sequence">0</field>
+            <field name="question">Overall how did your experience go ?</field>
+            <field name="type">simple_choice</field>
+            <field name="display_mode">columns</field>
+            <field name="column_nb">2</field>
+            <field name="comments_allowed" eval="True"/>
+            <field name="comment_count_as_answer" eval="True"/>
+            <field name="comments_message">Add any specific comment related to your answer</field>
+            <field name="constr_mandatory" eval="True"/>
+        </record>
+        <record id="survey_page_1_q0_l0" model="survey.label">
+            <field name="question_id" ref="survey_page_1_q0"/>
+            <field name="value">Good</field>
+            <field name="sequence">0</field>
+        </record>
+        <record id="survey_page_1_q0_l1" model="survey.label">
+            <field name="question_id" ref="survey_page_1_q0"/>
+            <field name="value">Bad</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="survey_page_1_q1" model="survey.question">
+            <field name="page_id" ref="survey_page_1"/>
+            <field name="sequence">0</field>
+            <field name="question">How easy did you find what you requested ?</field>
+            <field name="type">simple_choice</field>
+            <field name="display_mode">dropdown</field>
+            <field name="comments_allowed" eval="True"/>
+            <field name="comment_count_as_answer" eval="True"/>
+            <field name="comments_message">If not in the list please specify</field>
+            <field name="constr_mandatory" eval="True"/>
+        </record>
+        <record id="survey_page_1_q1_l0" model="survey.label">
+            <field name="question_id" ref="survey_page_1_q1"/>
+            <field name="value">Good</field>
+            <field name="sequence">0</field>
+        </record>
+        <record id="survey_page_1_q1_l1" model="survey.label">
+            <field name="question_id" ref="survey_page_1_q1"/>
+            <field name="value">Bad</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="survey_page_1_q2" model="survey.question">
+            <field name="page_id" ref="survey_page_1"/>
+            <field name="sequence">0</field>
+            <field name="question">How would you qualify the user experience ?</field>
+            <field name="type">multiple_choice</field>
+            <field name="column_nb">2</field>
+            <field name="comments_allowed" eval="True"/>
+            <field name="comment_count_as_answer" eval="True"/>
+            <field name="comments_message">Add one item not in the list if necessary</field>
+            <field name="constr_mandatory" eval="True"/>
+        </record>
+        <record id="survey_page_1_q2_l0" model="survey.label">
+            <field name="question_id" ref="survey_page_1_q2"/>
+            <field name="value">Easy</field>
+            <field name="sequence">0</field>
+        </record>
+        <record id="survey_page_1_q2_l1" model="survey.label">
+            <field name="question_id" ref="survey_page_1_q2"/>
+            <field name="value">Fluid</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="survey_page_1_q2_l2" model="survey.label">
+            <field name="question_id" ref="survey_page_1_q2"/>
+            <field name="value">Bloated</field>
+            <field name="sequence">2</field>
+        </record>
+        <record id="survey_page_1_q2_l3" model="survey.label">
+            <field name="question_id" ref="survey_page_1_q2"/>
+            <field name="value">Rainbowy</field>
+            <field name="sequence">3</field>
+        </record>
+        <record id="survey_page_1_q3" model="survey.question">
+            <field name="page_id" ref="survey_page_1"/>
+            <field name="sequence">0</field>
+            <field name="question">Woop woop</field>
+            <field name="type">matrix</field>
+            <field name="matrix_subtype">simple</field>
+            <field name="constr_mandatory" eval="False"/>
+        </record>
+        <record id="survey_page_1_q3_l0" model="survey.label">
+            <field name="question_id" ref="survey_page_1_q3"/>
+            <field name="value">Disagree</field>
+            <field name="sequence">0</field>
+        </record>
+        <record id="survey_page_1_q3_l1" model="survey.label">
+            <field name="question_id" ref="survey_page_1_q3"/>
+            <field name="value">Agree</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="survey_page_1_q3_r0" model="survey.label">
+            <field name="question_id_2" ref="survey_page_1_q3"/>
+            <field name="value">Assertion1</field>
+            <field name="sequence">0</field>
+        </record>
+        <record id="survey_page_1_q3_r1" model="survey.label">
+            <field name="question_id_2" ref="survey_page_1_q3"/>
+            <field name="value">Assertion2</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="survey_page_1_q4" model="survey.question">
+            <field name="page_id" ref="survey_page_1"/>
+            <field name="sequence">0</field>
+            <field name="question">Woop woop2</field>
+            <field name="type">matrix</field>
+            <field name="matrix_subtype">multiple</field>
+            <field name="constr_mandatory" eval="False"/>
+        </record>
+        <record id="survey_page_1_q4_l0" model="survey.label">
+            <field name="question_id" ref="survey_page_1_q4"/>
+            <field name="value">Disagree</field>
+            <field name="sequence">0</field>
+            <field name="quizz_mark">4</field>
+        </record>
+        <record id="survey_page_1_q4_l1" model="survey.label">
+            <field name="question_id" ref="survey_page_1_q4"/>
+            <field name="value">Agree</field>
+            <field name="sequence">1</field>
+            <field name="quizz_mark">4</field>
+        </record>
+        <record id="survey_page_1_q4_r0" model="survey.label">
+            <field name="question_id_2" ref="survey_page_1_q4"/>
+            <field name="value">Assertion1</field>
+            <field name="sequence">0</field>
+        </record>
+        <record id="survey_page_1_q4_r1" model="survey.label">
+            <field name="question_id_2" ref="survey_page_1_q4"/>
+            <field name="value">Assertion2</field>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="survey_page_2" model="survey.page">
+            <field name="title">Comments</field>
+            <field name="survey_id" ref="survey_0"/>
+            <field name="sequence">3</field>
+            <field name="description" type="html">
+<p>This section is about free comments allowing to give precise feedback.</p></field>
+        </record>
+        <record id="survey_page_0_q1" model="survey.question">
+            <field name="page_id" ref="survey_page_2"/>
+            <field name="sequence">1</field>
+            <field name="question">Do you have some additional comments ?</field>
+            <field name="type">free_text</field>
+            <field name="constr_mandatory" eval="False"/>
+        </record>
     </data>
 </odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="base_data.res_users_0" model="res.users">
+            <field name="groups_id" eval="[(4, ref('website.group_website_publisher'))]"/>
+        </record>
+        <record id="base_data.res_users_1" model="res.users">
+            <field name="groups_id" eval="[(4, ref('website.group_website_designer'))]"/>
+        </record>
+        <record id="base_data.res_users_2" model="res.users">
+            <field name="groups_id" eval="[]"/>
+        </record>
+    </data>
+</odoo>
