@@ -4,7 +4,7 @@
     <!-- CHANNEL 0: Basics of Gardening -->
     <!-- ================================================== -->
     <record id="slide_channel_0_partner_admin" model="slide.channel.partner">
-        <field name="channel_id" ref="website_slides.channel_public"/>
+        <field name="channel_id" ref="website_slides_data.slide_channel_demo_0_gard_0"/>
         <field name="partner_id" ref="base.partner_admin"/>
     </record>
     <record id="slide_slide_0_0_partner_admin" model="slide.slide.partner">
@@ -20,7 +20,7 @@
         <field name="vote">1</field>
     </record>
     <record id="slide_channel_0_res_partner_user_2" model="slide.channel.partner">
-        <field name="channel_id" ref="website_slides.channel_public"/>
+        <field name="channel_id" ref="website_slides_data.slide_channel_demo_0_gard_0"/>
         <field name="partner_id" ref="base_data.res_partner_user_2"/>
     </record>
     <record id="slide_slide_0_0_res_partner_user_2" model="slide.slide.partner">
@@ -34,7 +34,7 @@
         <field name="vote">1</field>
     </record>
     <record id="slide_channel_0_res_partner_user_3" model="slide.channel.partner">
-        <field name="channel_id" ref="website_slides.channel_public"/>
+        <field name="channel_id" ref="website_slides_data.slide_channel_demo_0_gard_0"/>
         <field name="partner_id" ref="base_data.res_partner_user_3"/>
     </record>
     <record id="slide_slide_0_0_res_partner_user_3" model="slide.slide.partner">

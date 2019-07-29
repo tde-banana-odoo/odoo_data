@@ -12,9 +12,9 @@
         <record id="message_data_partner_6_0_0_notif_0" model="mail.notification">
             <field name="mail_message_id" ref="message_data_partner_6_0_0"/>
             <field name="res_partner_id" ref="base_data.res_partner_6_0"/>
-            <field name="is_email" eval="True"/>
+            <field name="notification_type">email</field>
             <field name="is_read" eval="True"/>
-            <field name="email_status">sent</field>
+            <field name="notification_status">sent</field>
         </record>
     <record id="message_data_partner_6_0_1" model="mail.message">
         <field name="model">res.partner</field>
@@ -28,16 +28,16 @@
 	    <record id="message_data_partner_6_0_1_notif_0" model="mail.notification">
 	    	<field name="mail_message_id" ref="message_data_partner_6_0_1"/>
 	        <field name="res_partner_id" ref="base_data.res_partner_user_0"/>
-	        <field name="is_email" eval="True"/>
+	        <field name="notification_type">email</field>
             <field name="is_read" eval="True"/>
-	        <field name="email_status">sent</field>
+	        <field name="notification_status">sent</field>
 	    </record>
         <record id="message_data_partner_6_0_1_notif_0" model="mail.notification">
             <field name="mail_message_id" ref="message_data_partner_6_0_1"/>
             <field name="res_partner_id" ref="base_data.res_partner_6_0"/>
-            <field name="is_email" eval="True"/>
+            <field name="notification_type">email</field>
             <field name="is_read" eval="True"/>
-            <field name="email_status">exception</field>
+            <field name="notification_status">exception</field>
             <field name="failure_type">SMTP</field>
         </record>
 </data></odoo>

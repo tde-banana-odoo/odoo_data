@@ -11,14 +11,14 @@
             <field name="mobile">+32 987 65 43 21</field>
             <field name="email">wow@example.com</field>
             <field name="website">www.example.com</field>
-            <field name="image" type="base64" file="base_data/static/img/logo_wood.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/logo_wood.jpg"/>
         </record>
         <record id="base.main_company" model="res.company">
             <field name="name">OpenWood SA</field>
         </record>
         <record id="base.user_admin" model="res.users">
             <field name="parent_id" eval="ref('base.main_partner')"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_user_0.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_user_0.jpg"/>
             <field name="notification_type">inbox</field>
             <field name="function">Über Boss</field>
             <field name="phone">+32 987 65 43 21</field>
@@ -39,7 +39,7 @@
             <field name="password">dummy</field>
             <field name="notification_type">inbox</field>
             <field name="groups_id" eval="[(4, ref('base.group_user')), (4, ref('base.group_partner_manager'))]"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_user_0.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_user_0.jpg"/>
             <field name="signature" type="xml"><p>--<br />Christine MegaUser</p></field>
             <field name="function">Sales Manager</field>
             <field name="phone">+32 987 65 43 21</field>
@@ -58,7 +58,7 @@
             <field name="password">dummy</field>
             <field name="notification_type">inbox</field>
             <field name="groups_id" eval="[(4, ref('base.group_user')), (4, ref('base.group_partner_manager'))]"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_user_1.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_user_1.jpg"/>
             <field name="signature" type="xml"><p>--<br />Antoine PowerUser</p></field>
             <field name="function">R&amp;D Manager</field>
             <field name="phone">+32 987 65 43 21</field>
@@ -77,7 +77,7 @@
             <field name="password">dummy</field>
             <field name="notification_type">inbox</field>
             <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_user_1.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_user_1.jpg"/>
             <field name="signature" type="xml"><p>--<br />Laetitia LowUser</p></field>
             <field name="function">Customer Relationship</field>
             <field name="phone">+32 987 65 43 21</field>
@@ -91,9 +91,7 @@
         <record id="res_partner_company_0" model="res.partner">
             <field name="name">Gimli Axe LTD</field>
             <field name="is_company" eval="True"/>
-            <field name="customer" eval="False"/>
-            <field name="supplier" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/logo_axe.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/logo_axe.jpg"/>
             <field name="street">Castle Esplanade</field>
             <field name="zip">FK8 1EJ</field>
             <field name="city">Stirling</field>
@@ -107,9 +105,7 @@
             <field name="name">Brett Starkaxe</field>
             <field name="title" ref="base.res_partner_title_prof"/>
             <field name="parent_id" eval="ref('res_partner_company_0')"/>
-            <field name="customer" eval="False"/>
-            <field name="supplier" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_hipster_0.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_hipster_0.jpg"/>
             <field name="type">contact</field>
             <field name="function">Mail Bearer</field>
             <field name="street">Castle Esplanade</field>
@@ -125,9 +121,7 @@
             <field name="name">Georges McStucky</field>
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_0')"/>
-            <field name="customer" eval="False"/>
-            <field name="supplier" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_viking_0.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_viking_0.jpg"/>
             <field name="type">delivery</field>
             <field name="function">Truck Driver</field>
             <field name="street">Castle Esplanade</field>
@@ -143,9 +137,7 @@
             <field name="name">Ailean Whitetree</field>
             <field name="title" ref="base.res_partner_title_madam"/>
             <field name="parent_id" eval="ref('res_partner_company_0')"/>
-            <field name="customer" eval="False"/>
-            <field name="supplier" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_viking_0.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_viking_0.jpg"/>
             <field name="type">invoice</field>
             <field name="function">Chest Keeper</field>
             <field name="street">Castle Esplanade</field>
@@ -161,9 +153,7 @@
             <field name="name">Kennocha Solerunner</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_0')"/>
-            <field name="customer" eval="False"/>
-            <field name="supplier" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_gen_0.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_gen_0.jpg"/>
             <field name="type">other</field>
             <field name="function">Phone Crasher</field>
             <field name="street">Castle Esplanade</field>
@@ -180,9 +170,7 @@
         <record id="res_partner_company_1" model="res.partner">
             <field name="name">Morning Wood Inc</field>
             <field name="is_company" eval="True"/>
-            <field name="customer" eval="True"/>
-            <field name="supplier" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/logo_morning_wood.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/logo_morning_wood.jpg"/>
             <field name="street">1305 SE 8th Ave</field>
             <field name="zip">OR 97214</field>
             <field name="city">Portland</field>
@@ -196,9 +184,7 @@
             <field name="name">Emma Farsight</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_1')"/>
-            <field name="customer" eval="True"/>
-            <field name="supplier" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_gen_10.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_gen_10.jpg"/>
             <field name="type">contact</field>
             <field name="function">News Inquirer</field>
             <field name="street">1305 SE 8th Ave</field>
@@ -214,9 +200,7 @@
             <field name="name">John Harsh</field>
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_1')"/>
-            <field name="customer" eval="True"/>
-            <field name="supplier" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_lumber_0.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_lumber_0.jpg"/>
             <field name="type">delivery</field>
             <field name="function">Jeep Master</field>
             <field name="street">1305 SE 8th Ave</field>
@@ -232,9 +216,7 @@
             <field name="name">Robert Wooding</field>
             <field name="title" ref="base.res_partner_title_doctor"/>
             <field name="parent_id" eval="ref('res_partner_company_1')"/>
-            <field name="customer" eval="True"/>
-            <field name="supplier" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_hipster_10.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_hipster_10.jpg"/>
             <field name="type">invoice</field>
             <field name="function">Golden Boy</field>
             <field name="street">1305 SE 8th Ave</field>
@@ -250,9 +232,7 @@
             <field name="name">Beverly Sequoia</field>
             <field name="title" ref="base.res_partner_title_doctor"/>
             <field name="parent_id" eval="ref('res_partner_company_1')"/>
-            <field name="customer" eval="True"/>
-            <field name="supplier" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_viking_1.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_viking_1.jpg"/>
             <field name="type">other</field>
             <field name="function">Heavy Root</field>
             <field name="street">1305 SE 8th Ave</field>
@@ -268,9 +248,7 @@
             <field name="name">Daliah Gloin</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_1')"/>
-            <field name="customer" eval="True"/>
-            <field name="supplier" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_lumber_0.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_lumber_0.jpg"/>
             <field name="type">other</field>
             <field name="function">Lumber</field>
             <field name="street">1305 SE 8th Ave</field>
@@ -287,8 +265,7 @@
         <record id="res_partner_company_2" model="res.partner">
             <field name="name">Tree Dealers SP</field>
             <field name="is_company" eval="True"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/logo_tree.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/logo_tree.jpg"/>
             <field name="street">Place d'Youville, 995</field>
             <field name="zip">QC G1R 3P1</field>
             <field name="city">Ville de Quebec</field>
@@ -302,8 +279,7 @@
             <field name="name">Laura Tremblay</field>
             <field name="title" ref="base.res_partner_title_madam"/>
             <field name="parent_id" eval="ref('res_partner_company_2')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_gen_1.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_gen_1.jpg"/>
             <field name="type">contact</field>
             <field name="function">Tree Lover</field>
             <field name="street">Place d'Youville, 995</field>
@@ -319,8 +295,7 @@
             <field name="name">Yannick Vitesse</field>
             <field name="title" ref="base.res_partner_title_prof"/>
             <field name="parent_id" eval="ref('res_partner_company_2')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_hipster_1.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_hipster_1.jpg"/>
             <field name="type">invoice</field>
             <field name="function">Mandator</field>
             <field name="street">Place d'Youville, 995</field>
@@ -336,8 +311,7 @@
             <field name="name">Jérôme Tétreault</field>
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_2')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_gen_0.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_gen_0.jpg"/>
             <field name="type">other</field>
             <field name="function">Happy Guy</field>
             <field name="street">Place d'Youville, 995</field>
@@ -353,8 +327,7 @@
             <field name="name">Eloïse St-Pierre</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_2')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_lumber_1.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_lumber_1.jpg"/>
             <field name="type">other</field>
             <field name="function">Lumber</field>
             <field name="street">Place d'Youville, 995</field>
@@ -370,8 +343,7 @@
             <field name="name">David CourrielCassé</field>
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_2')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_flower_2.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_flower_2.jpg"/>
             <field name="type">other</field>
             <field name="function">Broken Email Guy</field>
             <field name="street">Place d'Youville, 995</field>
@@ -387,8 +359,7 @@
             <field name="name">Virginie BouncyBubble</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_2')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_flower_0.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_flower_0.jpg"/>
             <field name="type">other</field>
             <field name="function">Bouncer Email Woman</field>
             <field name="street">Place d'Youville, 995</field>
@@ -405,8 +376,7 @@
         <record id="res_partner_company_3" model="res.partner">
             <field name="name">Bloem GmbH</field>
             <field name="is_company" eval="True"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/logo_flower.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/logo_flower.jpg"/>
             <field name="street">Behrenstraße 55</field>
             <field name="zip">10117</field>
             <field name="city">Berlin</field>
@@ -420,8 +390,7 @@
             <field name="name">Hans Krüger</field>
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_3')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_flower_0.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_flower_0.jpg"/>
             <field name="type">contact</field>
             <field name="function">Gardener</field>
             <field name="street">Behrenstraße 55</field>
@@ -437,8 +406,7 @@
             <field name="name">Constanze Weber</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_3')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_flower_10.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_flower_10.jpg"/>
             <field name="type">delivery</field>
             <field name="function">Car Driver</field>
             <field name="street">Behrenstraße 55</field>
@@ -454,8 +422,7 @@
             <field name="name">Erik Weiß</field>
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_3')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_flower_1.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_flower_1.jpg"/>
             <field name="type">invoice</field>
             <field name="function">Accountant</field>
             <field name="street">Behrenstraße 55</field>
@@ -471,8 +438,7 @@
             <field name="name">Valentina Müller</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_3')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_gen_50.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_gen_50.jpg"/>
             <field name="type">other</field>
             <field name="function">Gardener</field>
             <field name="street">Behrenstraße 55</field>
@@ -488,8 +454,7 @@
             <field name="name">Friedericke Schneider</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_3')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_hipster_0.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_hipster_0.jpg"/>
             <field name="type">other</field>
             <field name="function">Office Manager</field>
             <field name="street">Behrenstraße 55</field>
@@ -506,8 +471,7 @@
         <record id="res_partner_company_4" model="res.partner">
             <field name="name">Shangai Pterocarpus Furniture Co., Ltd.</field>
             <field name="is_company" eval="True"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/logo_furniture.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/logo_furniture.jpg"/>
             <field name="street">68 Taicang Rd, Shi Men Er Lu Jie Dao, Huangpu Qu</field>
             <field name="zip">200000</field>
             <field name="city">Shanghai Shi</field>
@@ -521,8 +485,7 @@
             <field name="name">Zhāng Lu</field>
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_4')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_gen_20.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_gen_20.jpg"/>
             <field name="type">contact</field>
             <field name="function">Contact</field>
             <field name="street">68 Taicang Rd, Shi Men Er Lu Jie Dao, Huangpu Qu</field>
@@ -538,8 +501,7 @@
             <field name="name">Luó Bei</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_4')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_flower_20.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_flower_20.jpg"/>
             <field name="type">delivery</field>
             <field name="function">Truck Driver</field>
             <field name="street">68 Taicang Rd, Shi Men Er Lu Jie Dao, Huangpu Qu</field>
@@ -555,8 +517,7 @@
             <field name="name">Dòng Li</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_4')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_gen_20.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_gen_20.jpg"/>
             <field name="type">invoice</field>
             <field name="function">Accountant</field>
             <field name="street">68 Taicang Rd, Shi Men Er Lu Jie Dao, Huangpu Qu</field>
@@ -572,8 +533,7 @@
             <field name="name">Tián Wong Kar</field>
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_4')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_gen_21.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_gen_21.jpg"/>
             <field name="type">other</field>
             <field name="function">Carpenter</field>
             <field name="street">68 Taicang Rd, Shi Men Er Lu Jie Dao, Huangpu Qu</field>
@@ -589,8 +549,7 @@
             <field name="name">Wāng Chao</field>
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_4')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_carpenter_20.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_carpenter_20.jpg"/>
             <field name="type">other</field>
             <field name="function">Architect</field>
             <field name="street">68 Taicang Rd, Shi Men Er Lu Jie Dao, Huangpu Qu</field>
@@ -607,8 +566,7 @@
         <record id="res_partner_company_5" model="res.partner">
             <field name="name">Delicious Food Pvt. Ltd.</field>
             <field name="is_company" eval="True"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/logo_food.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/logo_food.jpg"/>
             <field name="street">Koba, Gandhinagar Highway, Koba Patia, Sector 8</field>
             <field name="zip">382007</field>
             <field name="city">Gandhinagar</field>
@@ -622,8 +580,7 @@
             <field name="name">Niraja Modi</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_5')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_gen_30.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_gen_30.jpg"/>
             <field name="type">contact</field>
             <field name="function">CEO</field>
             <field name="street">Koba, Gandhinagar Highway, Koba Patia, Sector 8</field>
@@ -639,8 +596,7 @@
             <field name="name">Vihaan Patel</field>
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_5')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_gen_30.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_gen_30.jpg"/>
             <field name="type">invoice</field>
             <field name="function">CFO</field>
             <field name="street">Koba, Gandhinagar Highway, Koba Patia, Sector 8</field>
@@ -656,8 +612,7 @@
             <field name="name">Aadhira Rathod</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_5')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_cook_30.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_cook_30.jpg"/>
             <field name="type">other</field>
             <field name="function">Cook</field>
             <field name="street">Koba, Gandhinagar Highway, Koba Patia, Sector 8</field>
@@ -673,8 +628,7 @@
             <field name="name">Reyansh Jani</field>
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_5')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_gen_31.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_gen_31.jpg"/>
             <field name="type">other</field>
             <field name="function">Taste Architect</field>
             <field name="street">Koba, Gandhinagar Highway, Koba Patia, Sector 8</field>
@@ -691,8 +645,7 @@
         <record id="res_partner_company_6" model="res.partner">
             <field name="name">Kaamogrott SA</field>
             <field name="is_company" eval="True"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/logo_kaamegrott.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/logo_kaamegrott.jpg"/>
             <field name="street">Rue Montagne aux Herbes Potagères 7</field>
             <field name="zip">1000</field>
             <field name="city">Bruxelles</field>
@@ -706,8 +659,7 @@
             <field name="name">Leodegrance de Carmelide</field>
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_6')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/k_leodagan.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/k_leodagan.jpg"/>
             <field name="type">contact</field>
             <field name="function">CEO</field>
             <field name="street">Rue Montagne aux Herbes Potagères 7</field>
@@ -723,8 +675,7 @@
             <field name="name">Karadoc de Vannes</field>
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_6')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/k_karadoc.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/k_karadoc.jpg"/>
             <field name="type">delivery</field>
             <field name="function">Horse Master</field>
             <field name="street">Rue Montagne aux Herbes Potagères 7</field>
@@ -740,8 +691,7 @@
             <field name="name">Mevanwi de Vannes</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_6')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/k_mevanwi.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/k_mevanwi.jpg"/>
             <field name="type">invoice</field>
             <field name="function">CFO</field>
             <field name="street">Rue Montagne aux Herbes Potagères 7</field>
@@ -757,8 +707,7 @@
             <field name="name">Guenièvre de Carmelide</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_6')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/k_guenievre.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/k_guenievre.jpg"/>
             <field name="type">other</field>
             <field name="function">CTO</field>
             <field name="street">Rue Montagne aux Herbes Potagères 7</field>
@@ -774,8 +723,7 @@
             <field name="name">Provencal de Gaulle</field>
             <field name="title" ref="base.res_partner_title_mister"/>
             <field name="parent_id" eval="ref('res_partner_company_6')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/k_perceval.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/k_perceval.jpg"/>
             <field name="type">other</field>
             <field name="function">Vraie Patte du Pays de Galles</field>
             <field name="street">Rue Montagne aux Herbes Potagères 7</field>
@@ -794,8 +742,7 @@
         <record id="res_partner_0" model="res.partner">
             <field name="name">Jean-Claude Poilvache</field>
             <field name="title" ref="base.res_partner_title_mister"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_lumber_2.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_lumber_2.jpg"/>
             <field name="function">That guy</field>
             <field name="street">24 Rue Paul Bert</field>
             <field name="zip">75011</field>
@@ -809,8 +756,7 @@
         <record id="res_partner_1" model="res.partner">
             <field name="name">Hugo Kandeukan</field>
             <field name="title" ref="base.res_partner_title_mister"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_gen_11.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_gen_11.jpg"/>
             <field name="function">Diver</field>
             <field name="street">EPFL Innovation Park, Building A</field>
             <field name="zip">1015</field>
@@ -824,8 +770,7 @@
         <record id="res_partner_2" model="res.partner">
             <field name="name">Olivia Gonzalez</field>
             <field name="title" ref="base.res_partner_title_miss"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_hipster_1.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_hipster_1.jpg"/>
             <field name="function">Happy for Life</field>
             <field name="street">Rambla Catalunya 100, 4a</field>
             <field name="zip">08008</field>
@@ -839,8 +784,7 @@
         <record id="res_partner_3" model="res.partner">
             <field name="name">Giuseppe Bianchi</field>
             <field name="title" ref="base.res_partner_title_doctor"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_gen_1.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_gen_1.jpg"/>
             <field name="function">Food Solution Advisor</field>
             <field name="street">Piazza di Porta Ravegnana</field>
             <field name="zip">40126</field>
@@ -856,8 +800,7 @@
         <record id="res_partner_4" model="res.partner">
             <field name="name">José Rafael Hermanos</field>
             <field name="title" ref="base.res_partner_title_prof"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_flower_50.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_flower_50.jpg"/>
             <field name="function">Angry Gardener</field>
             <field name="street">Avenida Bolívar, Torre Camoruco,</field>
             <field name="zip">2001</field>
@@ -873,8 +816,7 @@
         <record id="res_partner_5" model="res.partner">
             <field name="name">Himari Kobayashi</field>
             <field name="title" ref="base.res_partner_title_miss"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_gen_21.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_gen_21.jpg"/>
             <field name="function">Tree Dealer</field>
             <field name="street">1 Chome-9-1 Marunouchi, Chiyoda-ku</field>
             <field name="zip">100-6701</field>
@@ -888,8 +830,7 @@
         <record id="res_partner_6" model="res.partner">
             <field name="name">Hoang Anh Dung</field>
             <field name="title" ref="base.res_partner_title_mister"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_gen_22.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_gen_22.jpg"/>
             <field name="function">Tasty Food Buyer</field>
             <field name="street">25 Hàng Cá, Hàng Bô, Hoàn Kiêm</field>
             <field name="zip"></field>
@@ -905,8 +846,7 @@
         <record id="res_partner_7" model="res.partner">
             <field name="name">Angus Daly James</field>
             <field name="title" ref="base.res_partner_title_mister"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_man_carpenter_0.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_man_carpenter_0.jpg"/>
             <field name="function">Carpenter</field>
             <field name="street">122 Alinga St</field>
             <field name="zip">ACT 2601</field>
@@ -922,8 +862,7 @@
         <record id="res_partner_8" model="res.partner">
             <field name="name">Bokamoso Govender</field>
             <field name="title" ref="base.res_partner_title_miss"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_gen_11.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_gen_11.jpg"/>
             <field name="function">Architect</field>
             <field name="street">22 Gerhard MoerdykStreet, Sunnyside</field>
             <field name="zip">0002</field>
@@ -937,8 +876,7 @@
         <record id="res_partner_9" model="res.partner">
             <field name="name">Dojyna Khan</field>
             <field name="title" ref="base.res_partner_title_miss"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_gen_40.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_gen_40.jpg"/>
             <field name="function">Furniture Manager</field>
             <field name="street">Hoda Shaarawy, Bab Al Louq, Abdeen</field>
             <field name="zip"></field>
@@ -956,8 +894,7 @@
             <field name="name">Eliane PortalUser</field>
             <field name="title" ref="base.res_partner_title_miss"/>
             <field name="parent_id" eval="ref('res_partner_company_1')"/>
-            <field name="customer" eval="True"/>
-            <field name="image" type="base64" file="base_data/static/img/people_woman_user_2.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/people_woman_user_2.jpg"/>
             <field name="type">other</field>
             <field name="function">Customer Portal User</field>
             <field name="street">Rue Montagne aux Herbes Potagères 7</field>

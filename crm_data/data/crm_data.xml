@@ -4,27 +4,22 @@
         <record id="sales_team.team_sales_department" model="crm.team">
         	<field name="name">Customer Relationship</field>
         	<field name="active" eval="True"/>
-        	<field name="team_type">sales</field>
         	<field name="user_id" ref="base.user_admin"/>
             <field name="use_opportunities">True</field>
             <field name="use_leads">True</field>
             <field name="alias_name">tde+customer</field>
             <field name="alias_contact">partners</field>
-            <field name="dashboard_graph_model">crm.lead</field>
             <field name="company_id" eval="False"/>
         </record>
 
         <record id="sales_team.salesteam_website_sales" model="crm.team">
         	<field name="name">Online Shop</field>
             <field name="active" eval="True"/>
-            <field name="team_type">website</field>
         	<field name="user_id" ref="base_data.res_users_0"/>
             <field name="use_opportunities">True</field>
             <field name="use_leads">True</field>
             <field name="alias_name">tde+shop</field>
             <field name="alias_contact">everyone</field>
-            <field name="dashboard_graph_model">crm.lead</field>
-            <field name="dashboard_graph_period">week</field>
             <field name="company_id" eval="False"/>
         </record>
 

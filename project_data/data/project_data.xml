@@ -31,7 +31,6 @@
             <field name="name">New</field>
             <field name="mail_template_id" ref="mail_template_data_project_task_1"/>
             <field name="legend_blocked">Not validated</field>
-            <field name="legend_priority">Priority of Dev</field>
         </record>
         <record id="project_stage_2" model="project.task.type">
             <field name="sequence">2</field>
@@ -44,13 +43,11 @@
             <field name="name">Done</field>
             <field name="mail_template_id" ref="mail_template_data_project_task_2"/>
             <field name="legend_blocked">Wrong Dev</field>
-            <field name="legend_priority">Priority of Announcement</field>
         </record>
         <record id="project_stage_4" model="project.task.type">
             <field name="sequence">3</field>
             <field name="name">Bleurk</field>
             <field name="legend_done">So much rotten</field>
-            <field name="legend_priority">Rotten Tomatoes</field>
         </record>
 
         <record id="project_1" model="project.project">
