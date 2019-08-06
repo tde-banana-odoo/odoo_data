@@ -70,7 +70,7 @@
 </td></tr>
 </table>
         </field>
-        <field name="attachment_ids" eval="[(4, ref('ir_attachment_0'))]"/>
+        <field name="attachment_ids" eval="[(4, ref('base_data.ir_attachment_0'))]"/>
     </record>
 
 </data>

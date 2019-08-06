@@ -19,6 +19,7 @@ This module adds vigorous data. For my tests.
         'data/res_partner_data_private.xml',  # comment me if necessary
         'data/res_partner_data_private_11.xml',  # comment me if necessary
         # 'data/res_partner_data_private_12.xml',  # comment me if necessary
+        'data/ir_data.xml',
     ],
     'installable': True,
     'auto_install': False,

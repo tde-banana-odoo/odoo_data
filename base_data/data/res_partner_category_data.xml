@@ -9,5 +9,14 @@
             <field name="name">Interested Customer</field>
             <field name="color" eval="6"/>
         </record>
+
+        <record id="res_partner_category_tree_0" model="res.partner.category">
+            <field name="name">Gardening</field>
+            <field name="color" eval="2"/>
+        </record>
+        <record id="res_partner_category_tree_1" model="res.partner.category">
+            <field name="name">Tree Keeper</field>
+            <field name="color" eval="4"/>
+        </record>
     </data>
 </odoo>

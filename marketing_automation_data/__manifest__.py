@@ -12,7 +12,6 @@ This module adds vigorous data. For my tests.
     """,
     'depends': ['base_data', 'marketing_automation'],
     'data': [
-        'data/ir_data.xml',
         'data/mass_mailing_data.xml',
         'data/marketing_automation_data.xml',
         'data/res_partner_data.xml',
