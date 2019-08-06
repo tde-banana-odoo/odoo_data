@@ -16,6 +16,7 @@ This module adds vigorous data. For my tests.
         'data/configuration_data_private.xml',  # comment if necessary
         'data/configuration_data_private_11.xml',  # comment if necessary
         # 'data/configuration_data_private_12.xml',  # comment if necessary
+        'data/mail_data.xml',
     ],
     'installable': True,
     'auto_install': True,
