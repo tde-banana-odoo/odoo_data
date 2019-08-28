@@ -22,7 +22,7 @@
         <field name="body" type="html"><p>Indeed we met yesterday at a tree lovers event. Very nice !</p></field>
         <field name="message_type">comment</field>
         <field name="subtype_id" ref="mail.mt_comment"/>
-        <field name="author_id" ref="base.partner_root"/>
+        <field name="author_id" ref="base.partner_admin"/>
         <field name="date" eval="(DateTime.today() - timedelta(days=4)).strftime('%Y-%m-%d %H:%M:00')"/>
     </record>
 	    <record id="message_data_partner_6_0_1_notif_0" model="mail.notification">
@@ -38,5 +38,6 @@
             <field name="is_email" eval="True"/>
             <field name="is_read" eval="True"/>
             <field name="email_status">exception</field>
+            <field name="failure_type">SMTP</field>
         </record>
 </data></odoo>
