@@ -23,7 +23,7 @@
         <field name="interval_number">0</field>
         <field name="trigger_type">mail_open</field>
         <field name="activity_type">action</field>
-        <field name="server_action_id" ref="ir_actions_server_partner_update_tag"/>
+        <field name="server_action_id" ref="base_data.ir_actions_server_partner_update_tag"/>
     </record>
 
     <function model="marketing.campaign" name="action_start_campaign"
