@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo><data noupdate="1">
+    <record id="message_data_partner_6_0_2" model="mail.message">
+        <field name="model">res.partner</field>
+        <field name="res_id" ref="base_data.res_partner_6_0"/>
+        <field name="body" type="html"><p>Hello! This is an example of SMS without notifications.</p></field>
+        <field name="message_type">sms</field>
+        <field name="subtype_id" ref="mail.mt_comment"/>
+        <field name="author_id" ref="base_data.res_partner_user_0"/>
+        <field name="date" eval="(DateTime.today() - timedelta(days=3)).strftime('%Y-%m-%d %H:%M:00')"/>
+    </record>
+    <record id="message_data_partner_6_0_3" model="mail.message">
+        <field name="model">res.partner</field>
+        <field name="res_id" ref="base_data.res_partner_6_0"/>
+        <field name="body" type="html"><p>Hello! This is an example of SMS with notifications.</p></field>
+        <field name="message_type">sms</field>
+        <field name="subtype_id" ref="mail.mt_comment"/>
+        <field name="author_id" ref="base_data.res_partner_user_0"/>
+        <field name="date" eval="(DateTime.today() - timedelta(days=3)).strftime('%Y-%m-%d %H:%M:00')"/>
+    </record>
+        <record id="message_data_partner_6_0_3_notif_0" model="mail.notification">
+            <field name="mail_message_id" ref="message_data_partner_6_0_3"/>
+            <field name="res_partner_id" ref="base_data.res_partner_6_0"/>
+            <field name="notification_type">sms</field>
+            <field name="notification_status">sent</field>
+            <field name="sms_number">+32485116927</field>
+        </record>
+        <record id="message_data_partner_6_0_3_notif_1" model="mail.notification">
+            <field name="mail_message_id" ref="message_data_partner_6_0_3"/>
+            <field name="res_partner_id" ref="base_data.res_partner_6_1"/>
+            <field name="notification_type">sms</field>
+            <field name="notification_status">sent</field>
+            <field name="sms_number">+32485116927</field>
+        </record>
+    <record id="message_data_partner_6_0_4" model="mail.message">
+        <field name="model">res.partner</field>
+        <field name="res_id" ref="base_data.res_partner_6_0"/>
+        <field name="body" type="html"><p>Hello! This is an example of SMS with failed and sent notifications.</p></field>
+        <field name="message_type">sms</field>
+        <field name="subtype_id" ref="mail.mt_comment"/>
+        <field name="author_id" ref="base.partner_admin"/>
+        <field name="date" eval="(DateTime.today() - timedelta(days=2)).strftime('%Y-%m-%d %H:%M:00')"/>
+    </record>
+        <record id="message_data_partner_6_0_4_notif_0" model="mail.notification">
+            <field name="mail_message_id" ref="message_data_partner_6_0_4"/>
+            <field name="res_partner_id" ref="base_data.res_partner_6_0"/>
+            <field name="notification_type">sms</field>
+            <field name="notification_status">exception</field>
+            <field name="failure_type">sms_credit</field>
+            <field name="sms_number">+32485116927</field>
+        </record>
+        <record id="message_data_partner_6_0_4_notif_1" model="mail.notification">
+            <field name="mail_message_id" ref="message_data_partner_6_0_4"/>
+            <field name="res_partner_id" ref="base_data.res_partner_6_1"/>
+            <field name="notification_type">sms</field>
+            <field name="notification_status">exception</field>
+            <field name="failure_type">sms_number_format</field>
+            <field name="sms_number">855</field>
+        </record>
+        <record id="message_data_partner_6_0_4_notif_2" model="mail.notification">
+            <field name="mail_message_id" ref="message_data_partner_6_0_4"/>
+            <field name="res_partner_id" eval="False"/>
+            <field name="notification_type">sms</field>
+            <field name="notification_status">sent</field>
+            <field name="sms_number">+32485116927</field>
+        </record>
+        <record id="message_data_partner_6_0_4_notif_3" model="mail.notification">
+            <field name="mail_message_id" ref="message_data_partner_6_0_4"/>
+            <field name="res_partner_id" eval="False"/>
+            <field name="notification_type">sms</field>
+            <field name="notification_status">exception</field>
+            <field name="sms_number">0485116927</field>
+        </record>
+        <record id="message_data_partner_6_0_4_notif_4" model="mail.notification">
+            <field name="mail_message_id" ref="message_data_partner_6_0_4"/>
+            <field name="res_partner_id" ref="base_data.res_partner_6_2"/>
+            <field name="notification_type">sms</field>
+            <field name="notification_status">sent</field>
+            <field name="sms_number">+32485116927</field>
+        </record>
+
+     <record id="message_data_partner_6_1_0" model="mail.message">
+        <field name="model">res.partner</field>
+        <field name="res_id" ref="base_data.res_partner_6_1"/>
+        <field name="body" type="html"><p>Hello! This is an example of SMS without notifications.</p></field>
+        <field name="message_type">sms</field>
+        <field name="subtype_id" ref="mail.mt_comment"/>
+        <field name="author_id" ref="base_data.res_partner_user_0"/>
+        <field name="date" eval="(DateTime.today() - timedelta(days=3)).strftime('%Y-%m-%d %H:%M:00')"/>
+    </record>
+    <record id="message_data_partner_6_1_1" model="mail.message">
+        <field name="model">res.partner</field>
+        <field name="res_id" ref="base_data.res_partner_6_1"/>
+        <field name="body" type="html"><p>Hello! This is an example of SMS with failed and sent notifications.</p></field>
+        <field name="message_type">sms</field>
+        <field name="subtype_id" ref="mail.mt_comment"/>
+        <field name="author_id" ref="base.partner_admin"/>
+        <field name="date" eval="(DateTime.today() - timedelta(days=2)).strftime('%Y-%m-%d %H:%M:00')"/>
+    </record>
+        <record id="message_data_partner_6_1_1_notif_0" model="mail.notification">
+            <field name="mail_message_id" ref="message_data_partner_6_1_1"/>
+            <field name="res_partner_id" ref="base_data.res_partner_6_0"/>
+            <field name="notification_type">sms</field>
+            <field name="notification_status">exception</field>
+            <field name="failure_type">sms_credit</field>
+        </record>
+        <record id="message_data_partner_6_1_1_notif_1" model="mail.notification">
+            <field name="mail_message_id" ref="message_data_partner_6_1_1"/>
+            <field name="res_partner_id" ref="base_data.res_partner_6_1"/>
+            <field name="notification_type">sms</field>
+            <field name="notification_status">exception</field>
+            <field name="failure_type">sms_credit</field>
+        </record>
+        <record id="message_data_partner_6_1_1_notif_2" model="mail.notification">
+            <field name="mail_message_id" ref="message_data_partner_6_1_1"/>
+            <field name="res_partner_id" ref="base_data.res_partner_6_2"/>
+            <field name="notification_type">sms</field>
+            <field name="notification_status">sent</field>
+        </record>
+
+ </data></odoo>
