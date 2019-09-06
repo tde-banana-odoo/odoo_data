@@ -17,5 +17,15 @@
 records.write({'category_id': [(4, records.env.ref('base_data.res_partner_category_sale_0').id)]})</field>
 	</record>
 
+	<record id="ir_actions_server_partner_update_tag_1" model="ir.actions.server">
+		<field name="name">Partner: Set Gardening Tag</field>
+		<field name="type">ir.actions.server</field>
+		<field name="state">code</field>
+		<field name="model_id" ref="base.model_res_partner"/>
+		<field name="binding_model_id" ref="base.model_res_partner"/>
+		<field name="code">
+records.write({'category_id': [(4, records.env.ref('base_data.res_partner_category_tree_0').id)]})</field>
+	</record>
+
 </data>
 </odoo>
