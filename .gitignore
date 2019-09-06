@@ -5,6 +5,10 @@ base_data/data/res_partner_data_private_11.xml
 base_data/data/res_partner_data_private_12.xml
 base_data/data/res_partner_data_private_13.xml
 base_data/data/configuration_data_private.xml
+crm_iap_data/data/configuration_data_private.xml
+crm_iap_data/data/configuration_data_private_11.xml
+crm_iap_data/data/configuration_data_private_12.xml
+crm_iap_data/data/configuration_data_private_13.xml
 mail_data/data/configuration_data_private.xml
 mail_data/data/configuration_data_private_11.xml
 mail_data/data/configuration_data_private_12.xml
