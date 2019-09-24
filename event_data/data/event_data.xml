@@ -4,7 +4,7 @@
         <record id="event_0" model="event.event">
             <field name="name">Oiled Wood Cutters Show</field>
             <field name="date_begin"
-                eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 8:00:00')"/>
+                eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 08:00:00')"/>
             <field name="date_end"
                 eval="(DateTime.now() + timedelta(days=5)).strftime('%Y-%m-%d 18:00:00')"/>
         </record>
