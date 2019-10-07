@@ -907,7 +907,7 @@
             <field name="website">www.example.com</field>
         </record>
         <record id="res_users_3" model="res.users">
-            <field name="partner_id" eval="res_partner_user_3"/>
+            <field name="partner_id" ref="res_partner_user_3"/>
             <field name="login">dummy3</field>
             <field name="password">dummy</field>
             <field name="notification_type">email</field>
