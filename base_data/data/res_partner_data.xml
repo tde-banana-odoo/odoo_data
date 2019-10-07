@@ -16,7 +16,7 @@
         <record id="base.main_company" model="res.company">
             <field name="name">OpenWood SA</field>
         </record>
-        <record id="base.user_root" model="res.users">
+        <record id="base.user_admin" model="res.users">
             <field name="parent_id" eval="ref('base.main_partner')"/>
             <field name="image" type="base64" file="base_data/static/img/people_man_user_0.jpg"/>
             <field name="notification_type">inbox</field>
