@@ -2,7 +2,7 @@
 <odoo>
     <data noupdate="0">
         <record id="base.main_partner" model="res.partner">
-            <field name="name">OpenWood</field>
+            <field name="name">OpenWood SA</field>
             <field name="street">Orval 1</field>
             <field name="zip">6823</field>
             <field name="city">Florenville</field>
@@ -11,7 +11,7 @@
             <field name="mobile">+32 987 65 43 21</field>
             <field name="email">wow@example.com</field>
             <field name="website">www.example.com</field>
-            <field name="image" type="base64" file="base_data/static/img/logo_wood.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/logo_wood.jpg"/>
         </record>
         <record id="base.main_company" model="res.company">
             <field name="name">OpenWood SA</field>
@@ -29,7 +29,7 @@
             <field name="mobile">+1 555 44 33 22 11</field>
             <field name="email">brewery@example.com</field>
             <field name="website">www.example.com</field>
-            <field name="image" type="base64" file="base_data/static/img/logo_brewery.jpg"/>
+            <field name="image_1920" type="base64" file="base_data/static/img/logo_brewery.jpg"/>
         </record>
         <record id="second_company" model="res.company">
             <field name="name">OpenBrewery Company</field>
